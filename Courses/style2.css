@@ -1,0 +1,61 @@
+
+.textcourse{
+    padding-top: 130px;
+}
+
+.list-text{
+  font-size: 18px;
+}
+.button-apply{
+  width: 180px;
+  margin: auto;
+
+}
+#map-section {
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+.accordion-button{
+  width: 100%;
+}
+footer li:hover{
+  color: orange;
+  
+}
+.contactus a{color: black;}
+footer a{color:white}
+footer a:hover{
+  /* text-align: orange; */
+  color: orange;
+  /* align-items: orange; */
+  
+}
+.Explore{
+  padding-left: 50px;
+}
+
+  .cardcourse{transform: translate(0,120px);}
+  .accordion{
+    margin-top: 45px;
+  }
+
+@media screen and (min-width:0px) and (max-width:900px){
+    .cardcourse{
+        top: 0px;
+    }
+  .cardcourse{transform: translate(0,0px);}
+  .textcourse{
+    padding-top: 50px;
+  }
+  footer{
+    text-align: center;  
+    
+  
+}
+.imgggg{
+  display: flex;
+  justify-content: center;
+}
+
+}

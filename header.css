@@ -1,0 +1,401 @@
+.boxx {
+
+    border: 10px dashed orange;
+    /* border-spacing: 5px; */
+    /* border-spacing: 50%; */
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    stroke-width: 2px orange;
+    stroke-dasharray: 50px;
+    /* stroke-dasharray: 10; */
+
+}
+
+.boxx h1 {
+    animation-name: boxx1;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+
+
+.boxx2 {
+    border-top: 5px solid orange;
+    border-bottom: 5px solid orange;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    padding-top: 8px;
+    border-radius: 50%;
+    height: 190px;
+    width: 190px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boxx3 {
+    border-left: 3px solid orange;
+    border-right: 3px solid orange;
+    /* border-top: 5px solid transparent; */
+    /* border-bottom: 5px solid transparent; */
+
+    border-radius: 50%;
+    height: 220px;
+    width: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-name: boxx33;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes boxx1 {
+    0% {
+        transform: rotate(360deg);
+
+    }
+
+    100% {
+        transform: rotate(0deg);
+
+    }
+}
+
+
+@keyframes boxx33 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+
+    }
+}
+
+@keyframes boxx44 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-360deg);
+
+    }
+}
+
+
+.boxx4 {
+    animation-name: boxx44;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+    position: relative;
+    border: 2px solid orange;
+    border-radius: 50%;
+    height: 390px;
+    width: 390px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+}
+
+.icon1 {
+    position: absolute;
+    top: 13px;
+
+}
+
+.icon2 {
+    position: absolute;
+    left: 13px;
+
+}
+
+.icon3 {
+    position: absolute;
+    right: 13px;
+
+}
+
+.icon4 {
+    position: absolute;
+    bottom: 13px;
+
+}
+
+.icon5 {
+    position: absolute;
+    bottom: 55px;
+    right: 60px;
+
+}
+
+.icon6 {
+    position: absolute;
+    top: 55px;
+    right: 60px;
+
+}
+
+.icon7 {
+    position: absolute;
+    top: 55px;
+    left: 60px;
+
+}
+
+.icon8 {
+    position: absolute;
+    bottom: 55px;
+    left: 60px;
+
+}
+
+.nav-item {
+    padding-left: 15px;
+    font-size: 17px;
+}
+
+/* dropdown */
+/* Dropdown Button */
+.dropbtn {
+    /* background-color: #04AA6D; */
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 70px;
+    background-color: black;
+    min-width: 180px;
+    box-shadow: 5px 10px 10px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: White;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content div:hover {
+    background-color: white;
+    color: black ;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/* .dropdown-content a{
+    width: 100%;
+} */
+.dropdown-content div {
+   
+    width: 0px;
+    background-color: white;
+    color: black;
+    transition: width 1s;
+
+}
+.dropdown-content div:hover{
+    width: 100%;
+    color: black;
+}
+
+
+.limain{position: relative;}
+.limain .divv{
+    position: absolute;
+    background-color: white;
+    color: black;
+    width: 100%;
+    top: 0;
+    left: -200px;
+    transition:  1s;
+   
+
+}
+.limain:hover .divv{
+   left: 0px;
+   color: black;
+
+}
+/* .backimage{
+    background-image: url(./images/whatwedo.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+} */
+
+@media screen and (min-width:0px) and (max-width:800px) {
+   .mainheader{
+    padding-left: 0px !important;
+    display: flex !important;
+    justify-content: center;
+    align-items: center !important;
+
+   }
+   .boxx5{
+    align-items: center;
+   }
+    .textsh{
+        display: none !important;
+        font-size: 120px !important;
+    }
+}
+
+@media screen and (min-width:0px) and (max-width:800px) {
+    .boxx4 {
+        height: 280px ;
+        width: 280px ;
+        overflow: hidden;
+       
+    }
+    .boxx3{
+        height: 130px ;
+        width: 130px ;
+    }
+    .boxx2{
+        height: 100px ;
+        width: 100px ;
+    }
+    .boxx{
+        height: 70px ;
+        width: 70px ;  
+    }
+    .boxx2 h1{
+        font-size: 15px !important;
+    }
+
+    .icon5 {
+        position: absolute;
+        bottom: 40px;
+        right: 40px;
+    
+    }
+    
+    .icon6 {
+        position: absolute;
+        top: 40px;
+        right: 40px;
+    
+    }
+    
+    .icon7 {
+        position: absolute;
+        top: 40px;
+        left: 40px;
+    
+    }
+    .icon8 {
+        position: absolute;
+        bottom: 40px;
+        left: 40px;
+    
+    }
+}
+.bg-img {
+    width: 100%;
+    height: 60vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.formm2 form input {
+    width: 100%;
+    margin: 10px 0;
+    display: block;
+    padding: 9px;
+    border: none;
+    border-radius: 5px;
+    background-color: white;color:black;
+  
+  }
+  textarea{
+    background-color: rgb(60, 59, 56);color:white;
+  }
+.checkbox{
+    width: 3%!important;
+    outline: none !important;
+   }
+   .submit-btn{
+    width: 20% !important;
+    background-color: orange !important;
+    color:white !important;
+    border: none !important;
+   }
+   .contacts{
+    margin-top: 120px;
+   }
+
+   @media screen and (min-width:0px) and (max-width:700px){
+
+    .contacts{
+        margin-top: 20px;
+       }
+   }
+
+
+   * {
+    box-sizing: border-box;
+  }
+  
+  /* Float three columns side by side */
+  .column {
+    float: left;
+    width: 30%;
+    padding: 1.5%;
+  }
+  
+  .row {margin: 0 -5px;}
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive columns */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 30%;
+      display: block;
+      margin-bottom: 10px;
+    }
+  }
+  
+  /* Style the counter cards */
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: #444;
+    color: white;
+  }

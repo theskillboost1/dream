@@ -1,0 +1,209 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/">
+   
+
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" type="image/x-icon" href="/images/fav.png">
+
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #111; /* dark background for the whole page */
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        table {
+            width: 100%;
+            border: 2px solid black;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: rgba(0, 0, 0, 0.875); /* dark background */
+            color: white;
+        }
+
+        th {
+            width: 200px;
+            border: 1px solid gainsboro;
+            background-color: rgba(12, 12, 12, 0.807);
+            padding: 10px;
+            font-size: 18px;
+        }
+
+        td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid gainsboro;
+        }
+
+        tr:nth-child(even) {
+            background-color: rgba(0, 0, 0, 0.6); /* darker rows for contrast */
+        }
+
+        tr:nth-child(odd) {
+            background-color: rgba(0, 0, 0, 0.75); /* slightly lighter rows */
+        }
+
+        button {
+            background-color: orange;
+            border: none;
+            color: white;
+            padding: 8px 16px;
+            text-align: center;
+            font-size: 14px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin: 5px;
+        }
+
+        button:hover {
+            background-color: #e67e22; /* lighter orange on hover */
+        }
+
+        button:focus {
+            outline: none;
+        }
+
+        /* Optional: Add a little bit of animation to the hover effect */
+        button:hover {
+            transform: scale(1.05);
+            transition: 0.3s;
+        }
+
+        /* Center the table and improve overall look */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-black position-sticky"
+    style="top:10px; border-bottom: 1px solid gray;">
+    <div class="container">
+        <a class=" " title="The Skill Boost" style="color:orange;" href="index.html"><img src="./images/pnglogo.png"
+                width="80px" alt="The Skill Boost"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="fa fa-bars" style="color:orange"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="nav">
+            <ul class=" navbar-nav ms-auto ">
+                <li class="nav-item pt-md-3" style="height: 80px;">
+                    <a class="nav-link text-white " aria-current="page" href="./admin.html">Contact Details</a>
+                </li>
+
+                <li class="nav-item pt-md-3" style="height: 80px;">
+                    <a class="nav-link text-white" href="./adminquery.html">Query</a>
+                </li>
+               
+            </ul>
+
+
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <table>
+        <thead>
+            <tr>
+                <th>S.No.</th>
+                <th>Date</th>
+
+                <th>Name</th>
+                <th>Email</th>
+                <th>Contact</th>
+                <th>Qualification</th>
+                <th>Message</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="output">
+        </tbody>
+    </table>
+</div>
+
+<script>
+    function handleDelete(id) {
+        console.log("Attempting to delete user with ID:", id);
+
+        fetch(`https://server-7mnr.onrender.com/delete1/${id}`, {
+            method: 'DELETE',
+        })
+            .then(response => {
+
+                if (!response.ok) {
+                    throw new Error('Failed to delete user');
+                }
+                return response.json();
+            })
+            .then(data => {
+                if (data.message) {
+                    alert(data.message);
+                    location.reload();
+                } else {
+                    alert('Failed to delete the user. Please try again.');
+                }
+            })
+            .catch(err => {
+                console.error('Error:', err);
+                alert('An error occurred. Please try again.');
+            });
+    }
+    var No = 1
+
+    fetch('https://server-7mnr.onrender.com/dashboard1')
+        .then(response => response.json())
+        .then(json => {
+
+            const outputElement = document.getElementById("output");
+            outputElement.innerHTML = '';
+
+            for (let i = 0; i < json.length; i++) {
+                const name = json[i].Name;
+                const Date = json[i].Date;
+                const Email = json[i].email;
+                const Contact = json[i].Number;
+                const Qualification = json[i].Subject;
+                const Course = json[i].Message;
+                const id = json[i]._id;
+
+                outputElement.innerHTML += `
+                <tr>
+                    <td>${No}</td>
+                    <td>${Date}</td>
+
+
+                    <td>${name}</td>
+                    <td>${Email}</td>
+                    <td>${Contact}</td>
+                    <td>${Qualification}</td>
+                    <td>${Course}</td>
+                    <td> <button onclick="handleDelete('${id}')">Delete</button></td>
+                </tr>
+                `;
+                No= No +1
+            }
+        })
+        .catch(error => console.error('Error fetching data:', error));
+</script>
+
+
+ 
+</body>
+</html>

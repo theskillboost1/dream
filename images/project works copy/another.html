@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap-5.2.3-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <style>
+        a {
+            text-decoration: none;
+        }
+
+        body {
+            font-family: "Roboto", sans-serif !important;
+        }
+
+        .sec-icon {
+            position: relative;
+            display: inline-block;
+            padding: 0;
+            margin: 0 auto;
+        }
+
+        .sec-icon::before {
+            content: "";
+            position: absolute;
+            height: 1px;
+            left: -70px;
+            margin-top: -5.5px;
+            top: 60%;
+            background: #333333;
+            width: 50px;
+        }
+
+        .sec-icon::after {
+            content: "";
+            position: absolute;
+            height: 1px;
+            right: -70px;
+            margin-top: -5.5px;
+            top: 60%;
+            background: #333;
+            width: 50px;
+        }
+
+        .advertisers-service-sec {
+            background-color: #f5f5f5;
+        }
+
+        .advertisers-service-sec span {
+            color: orange;
+        }
+
+        .advertisers-service-sec .col {
+            padding: 0 1em 1em 1em;
+            text-align: center;
+        }
+
+        .advertisers-service-sec .service-card {
+            width: 100%;
+            height: 100%;
+            padding: 2em 1.5em;
+            border-radius: 5px;
+            box-shadow: 0 0 35px rgba(0, 0, 0, 0.12);
+            cursor: pointer;
+            transition: 0.5s;
+            position: relative;
+            z-index: 2;
+            overflow: hidden;
+            background: #fff;
+        }
+
+        .advertisers-service-sec .service-card::after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgb(8, 8, 8), orange);
+            position: absolute;
+            left: 0%;
+            top: -98%;
+            z-index: -2;
+            transition: all 0.4s cubic-bezier(0.77, -0.04, 0, 0.99);
+        }
+
+        .advertisers-service-sec h3 {
+            font-size: 20px;
+            text-transform: capitalize;
+            font-weight: 600;
+            color: #1f194c;
+            margin: 1em 0;
+            z-index: 3;
+        }
+
+        .advertisers-service-sec p {
+            color: #575a7b;
+            font-size: 15px;
+            line-height: 1.6;
+            letter-spacing: 0.03em;
+            z-index: 3;
+        }
+
+        .advertisers-service-sec .icon-wrapper {
+            background-color: #2c7bfe;
+            position: relative;
+            margin: auto;
+            font-size: 30px;
+            height: 2.5em;
+            width: 2.5em;
+            color: #ffffff;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            transition: 0.5s;
+            z-index: 3;
+        }
+
+        .advertisers-service-sec .service-card:hover:after {
+            top: 0%;
+        }
+
+        .service-card .icon-wrapper {
+            background-color: #ffffff;
+            color: rgb(255, 23, 131);
+        }
+
+        .advertisers-service-sec .service-card:hover .icon-wrapper {
+            color: #0dcaf0;
+        }
+
+        .advertisers-service-sec .service-card:hover h3 {
+            color: #ffffff;
+        }
+
+        .advertisers-service-sec .service-card:hover p {
+            color: #f0f0f0;
+        }
+
+        .ratings i {
+            color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="advertisers" class="advertisers-service-sec pt-5 pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="section-header text-center">
+                    <h2 class="text-Secondary display-2 fw-bold text-center py-5">
+                        Our
+                        <span class="text-warning display-2 fw-bold text-center py-5"> Projects </span>
+                    </h2>
+                    <p style="font-size: 20px;">"Here are some of our most recent successful projects, showcasing our
+                        latest achievements and the impact we've made for our clients.By showcasing these projects, Our
+                        aim to highlight our capabilities, the quality of our work, and the tangible benefits delivered
+                        to our clients."</p>
+                </div>
+            </div>
+            <div class="row mt-5 mt-md-4 row-cols-1 row-cols-sm-1 row-cols-md-3 justify-content-center">
+                <div class="col">
+                    <a href="https://vastuananda.com/">
+                        <div class="service-card">
+
+
+                            <div class="icon-wrapper">
+                                <i class="fa-solid fa-chart-line"></i>
+                                <img src="./vastu.png" alt="" width="100%">
+                            </div>
+                            <h3>Vastuananda</h3>
+                            <p>
+                                Boost Productivity and Success in Your Office with Vastu Shastra.Enhance office
+                                productivity and success with Vastu Shastra. Expert consultations and remedies for a
+                                harmonious work environment.
+                            </p>
+
+
+
+
+                        </div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="https://onlinetaxi.co.in/">
+                        <div class="service-card">
+                            <div class="icon-wrapper p-2">
+                                <!-- <i class="fa-solid fa-arrows-down-to-people"></i> -->
+                                <img src="./online taxi.png" alt="" width="100%">
+                            </div>
+                            <h3>Onlinetaxi</h3>
+                            <p>
+                                Book your rides instantly and enjoy seamless transportation with our top online taxi
+                                platform - always reliable, always convenient.
+                            </p>
+
+                        </div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="https://poorvithpharma.com/">
+                        <div class="service-card">
+                            <div class="icon-wrapper p-2">
+                                <!-- <i class="fa-solid fa-globe"></i> -->
+                                <img src="./poorvith-pharma-PNG.png" alt="" width="100%">
+                            </div>
+                            <h3>PoorvithPharma</h3>
+                            <p>
+                                Navigating Global Pharmaceutical Regulations with Confidence.Our experienced team of
+                                regulatory affairs experts provides personalized guidance to navigate complex global
+                                requirements and successfully bring your pharmaceutical products to market.
+                            </p>
+
+                        </div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="https://sunidhi23.netlify.app/">
+                        <div class="service-card">
+                            <div class="icon-wrapper">
+                                <!-- <i class="fa-solid fa-money-check-dollar"></i> -->
+                                <img src="./sunidhhi.png" alt="" width="100%">
+                            </div>
+                            <h3>Sunidhi23</h3>
+                            <p>
+                                As a frontend developer, my passion lies in crafting immersive digital experiences that
+                                captivate and engage users
+                            </p>
+
+                        </div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="https://abhaythakur18.netlify.app/">
+                        <div class="service-card">
+                            <div class="icon-wrapper p-2">
+                                <!-- <i class="fa-regular fa-circle-check"></i> -->
+                                <img src="./abhay.png" alt="" width="100%">
+                            </div>
+                            <h3>Abhay Thakur</h3>
+                            <p>
+                                Hello My name is Abhay
+                                I'm 21 years old Mern Stack Developer. with a love for turning ideas into beautiful,
+                                functional websites and applications.
+                            </p>
+
+                        </div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="https://gplandscape.000.pe/hom/">
+                        <div class="service-card">
+                            <div class="icon-wrapper">
+                                <!-- <i class="fa-solid fa-people-group"></i> -->
+                                <img src="./GB_Landscapes.png-removebg-preview.png" alt="" width="100%">
+
+                            </div>
+                            <h3>GB Landscapes</h3>
+                            <p>
+                                Transforming Dreams into Green Realities
+                                Experience the magic of nature intertwined with design. Explore our Landscaping services
+                                that redefine outdoor spaces
+                            </p>
+
+
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

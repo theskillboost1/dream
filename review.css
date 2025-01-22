@@ -1,0 +1,332 @@
+/* #main h1 {
+    font-size: 45px;
+    color: white;
+    text-align: center;
+    background-color: black;
+} */
+
+/* .cards-list {
+    z-index: 0;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.cardd {
+    margin: 30px ;
+    width: 300px;
+    height: 260px;
+    border-radius: 50px 0;
+    box-shadow: 0px 0px 15px rgb(0 0 0 / 30%);
+    cursor: pointer;
+    transition: 0.4s;
+    justify-content: flex-start !important;
+    background-color: orange;
+}
+
+.card_image {
+    background: #fff;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin: 10px auto;
+}
+
+
+.card_title .heading {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: auto;
+    text-align: center;
+    color: #fff;
+}
+
+.card_title p {
+    margin: 10px auto;
+    line-height: normal;
+    text-align: center;
+    color: #fff;
+}
+
+.cardd {
+    background-color: rgb(253, 183, 53) !important;
+}
+
+.cardd:hover {
+    background-color: orange !important;
+}
+
+
+
+body {
+    background: #1b1b1b;
+    color: #e2e2e2;
+}
+
+.handles svg path {
+    stroke: #e2e2e2 !important;
+}
+
+.dots span {
+    background: #fff !important;
+    opacity: 0.5
+}
+
+.dots span.active {
+    opacity: 1
+}
+
+.PostSlide {
+    max-width: 1300px;
+    margin: 40px auto;
+}
+
+.PostSlide {
+    max-width: 1300px;
+    margin: 10px auto 40px;
+}
+
+.PostSlide .innerContainer .slider {
+    display: flex;
+    width: 1280px;
+    overflow-x: hidden;
+    margin: auto;
+}
+
+.PostSlide .innerContainer .slider .slide {
+    display: block;
+    background-size: cover !important;
+    background-position: center center !important;
+    min-width: 280px;
+    height: 420px;
+    margin: 0 10px;
+}
+
+.PostSlide .innerContainer .slider {
+    position: relative;
+    z-index: 2;
+}
+
+.PostSlide .innerContainer .handles {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: -230px;
+    width: 103%;
+    cursor: pointer;
+    margin-right: -20px;
+    margin-left: -20px;
+    z-index: 4;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.PostSlide .dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+}
+
+.PostSlide .dots span {
+    border-radius: 10px;
+    background: #CBCBCB;
+    width: 6px;
+    height: 6px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+
+.PostSlide .handles>span {
+    transition: opacity 0.3s;
+}
+
+/* .PostSlide .handles .prev {
+    opacity: 0;
+} */
+
+/* .PostSlide .handles .next {
+    opacity: 1;
+}
+
+.PostSlide .handles * {
+    user-select: none;
+}
+
+
+@media (min-width: 1280px) {
+    .PostSlide .innerContainer .slider {
+        width: 1200px !important;
+        margin: auto;
+    }
+}
+
+@media (max-width: 1280px) {
+    .PostSlide .innerContainer .handles {
+        width: calc(100% + 30px) !important;
+        margin-left: -15px !important;
+        margin-right: -15px !important;
+    }
+}
+
+@media (min-width: 960px) and (max-width: 1280px) {
+    .PostSlide .innerContainer .slider {
+        width: 960px !important;
+    }
+}
+
+@media (min-width: 960px) and (max-width: 1280px) {
+    .PostSlide .innerContainer .slider {
+        width: 960px !important;
+    }
+}
+
+@media (min-width: 640px) and (max-width: 960px) {
+    .PostSlide .innerContainer .slider {
+        width: 640px !important;
+    }
+}
+
+@media (max-width: 640px) {
+    .PostSlide .innerContainer .slider {
+        width: 300px !important;
+    }
+    .cardd {
+        margin: 5px;
+    }
+    .PostSlide{
+        width: 90% !important;
+    }
+    .geometric-box{
+        display: none !important;
+    }
+}
+
+
+
+.card_image img{
+    height: 40px;
+}
+.card_image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+ */
+
+/* ...........new.............  */
+
+.card-body_b {
+    height: 250px;
+    width: 100%;
+    padding: 20px;
+    /* background-color: pink; */
+}
+
+.card_b {
+    background-color: orange;
+    margin: 0 0.5em;
+    box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+    border: none;
+    border-radius: 10px;
+    margin: 0px;
+    padding: 10px;
+    height: 300px !important;
+    transition: transform 0.3s ease;
+}
+
+.card_b:hover {
+    transform: translateY(-5px);
+    background-color: white;
+    transition: 0.6s ease;
+}
+
+/* .card_b:hover .card-title_b {
+    color: black; 
+    transition: color 0.4s ease;
+} */
+/* .card_b:hover .card-text_b {
+    color: black; 
+    transition: color 0.4s ease;
+} */
+/* .card_b:hover .image_b{
+    background-color: black;
+} */
+
+
+.splide__list {
+    /* background-color: aqua; */
+    height: 400px;
+    width: 100%;
+    padding: 0px 20px;
+}
+
+
+.card-title_b {
+    color: black;
+    text-align: center;
+    font-weight: bolder;
+}
+
+
+.card-text_b {
+    color: black;
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: normal;
+}
+
+#h1_b {
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.image_b {
+    height: 70px;
+    width: 70px;
+    font-size: 50px;
+    margin: auto;
+    background-color: white;
+    border-radius: 50%;
+   
+}
+
+.splide__slide {
+    /* display: flex; */
+
+    /* justify-content: center;
+    align-items: center; */
+    height: 300px;
+    /* background-color: red; */
+
+
+}
+
+@media screen and (min-width: 768px) {
+    .card-body_b {
+        height: 200px;
+    }
+
+    .card_b {
+        height: 100%;
+
+    }
+}
+
+
+
+/* @media (max-width: 768px) {
+    .card-body_b {
+        height: auto;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    .splide__slide {
+        margin: 0 1em;
+    }
+} */

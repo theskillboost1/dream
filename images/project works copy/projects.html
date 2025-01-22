@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./bootstrap-5.2.3-dist/css/bootstrap.css">
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        .pro {
+            background-color: black;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        .wow:hover {
+            color: orange;
+            background-color: orange;
+            display: block;
+        }
+
+        .wow {
+            height: 300px;
+            width: 300px;
+            background-image: url(./s.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            overflow: hidden;
+            color: white;
+            position: relative;
+            margin: auto;
+            
+        }
+
+
+        .inner {
+            height: 300px;
+            width: 300px;
+            background-image: linear-gradient(rgba(255, 166, 0, 0.482),rgba(0, 0, 0, 0.553));
+            position: absolute;
+            top:0px;
+            left: 0px;
+            transform: translate(0px,-300px);
+            transition: 1s;
+            
+        }
+        .wow:hover .inner{transform: translate(0px,0px); color: white;}
+        .btn:hover{
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid pro ">
+        <div class="container ">
+            <div class="row ">
+                <div class="bloc">
+    
+                    <div class="col" style="margin-top: 80px;">
+                        <h1 style="color: white; font-weight: 700;"   > Our <span style="color: orange;"> Projects</span></h1>
+                        <p style="color: white; font-size: 25px;">"Here Are Some Of Our Most Recent Successful Projects:"</p>
+                        <button class="btn btn-warning">Websites</button>
+                        <button class="btn btn-warning">Students Projects</button>
+                        <div class="row mt-5">
+
+                            <div class=" wow">
+
+
+
+                                <h2>First</h2>
+
+                                <div class="inner">
+                                    <h2>First Project</h2>
+                                    <p>Hello this is first Project</p>
+                                </div>
+
+                            </div>
+
+                            <div class=" wow">
+
+
+
+                                <h2>Second</h2>
+    
+                                <div class="inner">
+                                    <h2>Second Project</h2>
+                                    <p>Hello this is first Project</p>
+                                </div>
+    
+                            </div>
+                            <div class=" wow">
+
+                                <h2>Third</h2>
+    
+                                <div class="inner">
+                                    <h2>Third Project</h2>
+                                    <p>Hello this is first Project</p>
+                                </div>
+    
+                            </div>
+
+
+                            
+                            
+    
+                            </div>
+                            
+                            <div class="row ">
+                                <div class="bloc">
+                    
+                                  <!-- <div class="col" style="margin-top: 80px;">
+                                        <h1 style="color: white; font-weight: 700;"   > Our <span style="color: orange;"> Projects</span></h1>
+                                        <p style="color: white; font-size: 25px;">"Here Are Some Of Our Most Recent Successful Projects:"</p>
+                                        <button class="btn btn-warning">Websites</button> 
+                                        <button class="btn btn-warning">Students Projects</button>  -->
+                                        <div class="row mt-5">
+                
+                                            <div class=" wow">
+                
+                
+                
+                                                <h2>First</h2>
+                
+                                                <div class="inner">
+                                                    <h2>First Project</h2>
+                                                    <p>Hello this is first Project</p>
+                                                </div>
+                
+                                            </div>
+                
+                                            <div class=" wow">
+                
+                
+                
+                                                <h2>Second</h2>
+                    
+                                                <div class="inner">
+                                                    <h2>Second Project</h2>
+                                                    <p>Hello this is first Project</p>
+                                                </div>
+                    
+                                            </div>
+                                            <div class=" wow">
+                
+                                                <h2>Third</h2>
+                    
+                                                <div class="inner">
+                                                    <h2>Third Project</h2>
+                                                    <p>Hello this is first Project</p>
+                                                </div>
+                    
+                                            </div>
+                
+                
+                                            
+                            </div>                
+                            
+
+                        </div>
+                        
+
+                    </div>
+                    
+                </div>
+            </div>
+
+        </div>
+    
+
+  
+</body>
+
+</html>

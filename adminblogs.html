@@ -86,11 +86,11 @@
             margin: 0 auto;
             padding: 20px;
         }
+      
 
     </style>
 </head>
 <body class="bg-black">
-
     <nav class="navbar navbar-expand-md navbar-dark bg-black position-sticky"
     style="top:10px; border-bottom: 1px solid gray;">
     <div class="container">
@@ -120,19 +120,19 @@
 </nav>
 
 <div class="container odd">
-    <h1 class="text-center py-5">All User Data Shown From Contact Page</h1>
-
+    <h1 class="text-center py-5">All Blogs Shown Here (Admin Pannel)</h1>
+    <div class="d-flex justify-content-end">
+        <a href="./Blog/createblog.html">
+    <Button class="px-5 text-white btn btn-success "> Add Blog</Button>
+</a>
+</div>
     <table class="border">
         <thead class="text-warning">
             <tr>
                 <th>S.No.</th>
                 <th>Date</th>
-
-                <th>Name</th>
-                <th>Email</th>
-                <th>Contact</th>
-                <th>Qualification</th>
-                <th>Message</th>
+                <th>Blog title</th>
+                <th>Description</th>
                 <th>Action</th>
             </tr>
         </thead>
@@ -145,7 +145,7 @@
     function handleDelete(id) {
         console.log("Attempting to delete user with ID:", id);
 
-        fetch(`https://server-7mnr.onrender.com/delete1/${id}`, {
+        fetch(`https://server-7mnr.onrender.com/deletee/${id}`, {
             method: 'DELETE',
         })
             .then(response => {
@@ -170,7 +170,7 @@
     }
     var No = 1
 
-    fetch('https://server-7mnr.onrender.com/dashboard1')
+    fetch('https://server-7mnr.onrender.com/show')
         .then(response => response.json())
         .then(json => {
 
@@ -178,25 +178,17 @@
             outputElement.innerHTML = '';
 
             for (let i = 0; i < json.length; i++) {
-                const name = json[i].Name;
+                const blogt = json[i].Title;
                 const Date = json[i].Date;
-                const Email = json[i].email;
-                const Contact = json[i].Number;
-                const Qualification = json[i].Subject;
-                const Course = json[i].Message;
+                const description = json[i].Description;
                 const id = json[i]._id;
 
                 outputElement.innerHTML += `
                 <tr>
                     <td>${No}</td>
                     <td>${Date}</td>
-
-
-                    <td>${name}</td>
-                    <td>${Email}</td>
-                    <td>${Contact}</td>
-                    <td>${Qualification}</td>
-                    <td>${Course}</td>
+                    <td>${blogt}</td>
+                    <td class="DSC">${description}</td>
                     <td> <button onclick="handleDelete('${id}')">Delete</button></td>
                 </tr>
                 `;

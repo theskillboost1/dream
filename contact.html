@@ -240,60 +240,50 @@
                         <p class="py-4">Please fill out this short form and we'll contact you shortly.
 
                         </p>
-                        <form action="https://server-7mnr.onrender.com/create1" method="post" name="formName"
-                            class="row g-3" id="myform">
-
+                        <script>
+                            const form = document.getElementById('myform');
+                            
+                            form.onsubmit = function(e) {
+                                // e.preventDefault();  
+                                console.log("Form submitted!"); 
+                                alert("Done");
+                                Window.location.reload()
+                
+                            };
+                        </script>
+                        
+                        <form action="https://server-7mnr.onrender.com/create1" method="post" id="myform" name="formName" class="row g-3" >
                             <div class="col-md">
-                                <input class="form-control form-input" type="text" placeholder="Your Name*" name="Name"
-                                    required>
-
+                                <input class="form-control form-input" type="text" placeholder="Your Name*" name="Name" required>
                             </div>
                             <div class="col-md">
-                                <input id="email" class="form-control form-input" type="email" placeholder="Your Email*"
-                                    name="email" required>
+                                <input id="email" class="form-control form-input" type="email" placeholder="Your Email*" name="email" required>
                             </div>
-
-
                             <div class="col-12">
                                 <input type="date" name="Date" placeholder="Date" required id="dateInput">
-
                                 <script>
-                                 
-                                  const dateInput = document.getElementById('dateInput');
-                                  const today = new Date().toISOString().split('T')[0];
-                                  dateInput.value = today;
+                                    const dateInput = document.getElementById('dateInput');
+                                    const today = new Date().toISOString().split('T')[0];
+                                    dateInput.value = today;
                                 </script>
-
                             </div>
-
                             <div class="col-12">
-                                <input id="company-name" class=" form-control form-input" pattern="[789][0-9]{9}"
-                                    type="text" placeholder="Phone number*" name="Number" required>
-
+                                <input id="company-name" class="form-control form-input" pattern="[789][0-9]{9}" type="text" placeholder="Phone number*" name="Number" required>
                             </div>
-
                             <div class="col-12">
-                                <input id="company-name" class="form-control form-input" type="text"
-                                    placeholder="Course" name="Subject">
+                                <input id="company-name" class="form-control form-input" type="text" placeholder="Course" name="Subject">
                             </div>
-
                             <div class="col-12">
-                                <textarea minlength="20" id="message" cols="30" rows="7" class="form-control "
-                                    placeholder="Your Message*" name="Message" required></textarea>
+                                <textarea minlength="20" id="message" cols="30" rows="7" class="form-control" placeholder="Your Message*" name="Message" required></textarea>
                             </div>
                             <div class="col-12 d-flex">
-
-                                <!-- <input type="checkbox" id="checkbox" name="checkbox" class="text-secondary checkbox"
-                                    checked>
-                                Yes, I would like to receive
-                                communications by call / email about Company's services. -->
-
+                                <!-- Optional Checkbox for communications -->
                             </div>
                             <p class="full-width">
                                 <input type="submit" class="btn submit-btn" value="Submit">
-                                <!-- <button class="reset-btn" onclick="reset()">Reset</button> -->
                             </p>
                         </form>
+                        
                     </div>
                 </div>
                 <script>

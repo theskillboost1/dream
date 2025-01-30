@@ -184,7 +184,7 @@
         function handleDelete(id) {
             console.log("Attempting to delete user with ID:", id);
 
-            fetch(`https://the-skill-boost-server.onrender.com/dashboard1/delete/${id}`, {
+            fetch(`https://the-skill-boost-server.onrender.com/delete/${id}`, {
                 method: 'DELETE',
             })
                 .then(response => {
@@ -208,7 +208,7 @@
         }
 
         var No = 1;
-        fetch('https://the-skill-boost-server.onrender.com/dashboard1/dashboard')
+        fetch('https://the-skill-boost-server.onrender.com/dashboard')
             .then(response => response.json())
             .then(json => {
                 const outputElement = document.getElementById("output");

@@ -455,6 +455,9 @@ textarea {
     height: auto;
     border-radius: 15px;
 }
+#Advise-form {
+    scroll-margin-top: 100px; /* Adjust this value as per navbar height */
+}
 
 .form-header {
     background-color: orange;
@@ -630,7 +633,7 @@ width: 200px; /* Even smaller button width on very small screens */
 
 }
 /* --------------------------------------------------------------end trial-------------------------------------------  */
-/* -----------------------------------------------------------start-------------------------------------------- */
+/* -----------------------------------------------------------start accordion-------------------------------------------- */
 #accordionEx .accordion-item button {
     color: black;
     background-color: transparent;
@@ -733,7 +736,21 @@ width: 200px; /* Even smaller button width on very small screens */
     right: 10px;
     font-size: 90px !important;
     color: orange !important;
+
 }
+#review-slider .item {
+    overflow: hidden; /* Extra part hide karega */
+    display: inline-block;
+}
+
+#review-slider .item img {
+    transition: transform 0.3s ease-in-out; /* Smooth animation */
+}
+
+#review-slider .item:hover img {
+    transform: translateY(-10px); /* Image upar move karegi */
+}
+
 /* --------------------------------------------end slider-------------------------------------------  */
 /* ------------------------------------certification start---------------------------- */
 
@@ -806,33 +823,72 @@ width: 200px; /* Even smaller button width on very small screens */
 /* ------------------------------------end text-reviews ---------------------------- */
 /* --------------------------------------------------------------related-course start--------------------------------------------- */
 
-#related-course li span,h1{
+
+
+/* --------------------------------------- Related Course Section ----------------------------------- */
+
+#related-course li span, h1 {
     color: orange;
 }
-#related-course a{
+
+#related-course a {
     text-decoration: none;
     color: black;
 }
-#related-course a:hover{
+
+#related-course a:hover {
     color: orange;
 }
-/* -------------------------------------------------------end related-course------------------------------------------- */
 
+/* --------------------------------------- Course List (Default/Desktop View) ----------------------------------- */
 
+#course-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px; /* Items ke beech gap */
+    padding: 0;
+}
 
-/* --------------------------------------- start course-list--------------------------------------------------- */
-
-#course-list li{
-    width: 380px;
+#course-list li {
+    width:100%; /* Desktop view ke liye */
     background-color: white;
     border-radius: 5px;
     font-weight: bold;
     text-align: center;
     margin-right: 5px;
-    margin-bottom: 5px;
-  
+    padding: 10px;
+    list-style: none; /* Dots hatane ke liye */
 }
-/* ---------------------------------------end course-list--------------------------------------------------- */
+
+/* --------------------------------------- Mobile View (One Course Per Row) ----------------------------------- */
+
+@media (max-width: 768px) { 
+    #course-list {
+        display: flex;
+        flex-direction: column; /* Mobile view me ek ek row me show hoga */
+        align-items: center; /* Center align */
+        width: 100%;
+    }
+
+    #course-list li {
+        width: 90%; /* Full width with little margin */
+        display: block; /* Block level element */
+        text-align: center;
+        margin: 5px 0; /* Spacing between rows */
+    }
+
+    /* Agar kisi div ke andar courses hain to unka flex hatana zaroori hai */
+    #course-list .d-flex {
+        flex-direction: column; /* Ensure ek ek row me aaye */
+        align-items: center;
+        width: 100%;
+    }
+}
+
+
+
+/* ---------------------------------------end related-course--------------------------------------------------- */
 /* ---------------------------------------video reviews stat--------------------------------------------------- */
 
   /* Custom styling */

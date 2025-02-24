@@ -202,7 +202,7 @@
 /* Change color of dropdown links on hover */
 .dropdown-content div:hover {
     background-color: white;
-    color: black ;
+    color: black;
 }
 
 /* Show the dropdown menu on hover */
@@ -215,36 +215,42 @@
     width: 100%;
 } */
 .dropdown-content div {
-   
+
     width: 0px;
     background-color: white;
     color: black;
     transition: width 1s;
 
 }
-.dropdown-content div:hover{
+
+.dropdown-content div:hover {
     width: 100%;
     color: black;
 }
 
 
-.limain{position: relative;}
-.limain .divv{
+.limain {
+    position: relative;
+}
+
+.limain .divv {
     position: absolute;
     background-color: white;
     color: black;
     width: 100%;
     top: 0;
     left: -200px;
-    transition:  1s;
-   
+    transition: 1s;
+
 
 }
-.limain:hover .divv{
-   left: 0px;
-   color: black;
+
+.limain:hover .divv {
+    left: 0px;
+    color: black;
 
 }
+
 /* .backimage{
     background-image: url(./images/whatwedo.png);
     background-position: center;
@@ -253,17 +259,19 @@
 } */
 
 @media screen and (min-width:0px) and (max-width:800px) {
-   .mainheader{
-    padding-left: 0px !important;
-    display: flex !important;
-    justify-content: center;
-    align-items: center !important;
+    .mainheader {
+        padding-left: 0px !important;
+        display: flex !important;
+        justify-content: center;
+        align-items: center !important;
 
-   }
-   .boxx5{
-    align-items: center;
-   }
-    .textsh{
+    }
+
+    .boxx5 {
+        align-items: center;
+    }
+
+    .textsh {
         display: none !important;
         font-size: 120px !important;
     }
@@ -271,24 +279,28 @@
 
 @media screen and (min-width:0px) and (max-width:800px) {
     .boxx4 {
-        height: 280px ;
-        width: 280px ;
+        height: 280px;
+        width: 280px;
         overflow: hidden;
-       
+
     }
-    .boxx3{
-        height: 130px ;
-        width: 130px ;
+
+    .boxx3 {
+        height: 130px;
+        width: 130px;
     }
-    .boxx2{
-        height: 100px ;
-        width: 100px ;
+
+    .boxx2 {
+        height: 100px;
+        width: 100px;
     }
-    .boxx{
-        height: 70px ;
-        width: 70px ;  
+
+    .boxx {
+        height: 70px;
+        width: 70px;
     }
-    .boxx2 h1{
+
+    .boxx2 h1 {
         font-size: 15px !important;
     }
 
@@ -296,29 +308,31 @@
         position: absolute;
         bottom: 40px;
         right: 40px;
-    
+
     }
-    
+
     .icon6 {
         position: absolute;
         top: 40px;
         right: 40px;
-    
+
     }
-    
+
     .icon7 {
         position: absolute;
         top: 40px;
         left: 40px;
-    
+
     }
+
     .icon8 {
         position: absolute;
         bottom: 40px;
         left: 40px;
-    
+
     }
 }
+
 .bg-img {
     width: 100%;
     height: 60vh;
@@ -334,68 +348,612 @@
     padding: 9px;
     border: none;
     border-radius: 5px;
-    background-color: white;color:black;
-  
-  }
-  textarea{
-    background-color: rgb(60, 59, 56);color:white;
-  }
-.checkbox{
-    width: 3%!important;
+    background-color: white;
+    color: black;
+
+}
+
+textarea {
+    background-color: rgb(60, 59, 56);
+    color: white;
+}
+
+.checkbox {
+    width: 3% !important;
     outline: none !important;
-   }
-   .submit-btn{
+}
+
+.submit-btn {
     width: 20% !important;
     background-color: orange !important;
-    color:white !important;
+    color: white !important;
     border: none !important;
-   }
-   .contacts{
+}
+
+.contacts {
     margin-top: 120px;
-   }
+}
 
-   @media screen and (min-width:0px) and (max-width:700px){
+@media screen and (min-width:0px) and (max-width:700px) {
 
-    .contacts{
+    .contacts {
         margin-top: 20px;
-       }
-   }
+    }
+}
 
 
-   * {
+* {
     box-sizing: border-box;
-  }
-  
-  /* Float three columns side by side */
-  .column {
+}
+
+/* Float three columns side by side */
+.column {
     float: left;
     width: 30%;
     padding: 1.5%;
-  }
-  
-  .row {margin: 0 -5px;}
-  
-  /* Clear floats after the columns */
-  .row:after {
+}
+
+.row {
+    margin: 0 -5px;
+}
+
+/* Clear floats after the columns */
+.row:after {
     content: "";
     display: table;
     clear: both;
-  }
-  
-  /* Responsive columns */
-  @media screen and (max-width: 600px) {
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
     .column {
-      width: 30%;
-      display: block;
-      margin-bottom: 10px;
+        width: 30%;
+        display: block;
+        margin-bottom: 10px;
     }
-  }
-  
-  /* Style the counter cards */
-  .card {
+}
+
+/* Style the counter cards */
+.card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     padding: 16px;
     text-align: center;
     background-color: #444;
     color: white;
+}
+
+#accordionExample .accordion-item button {
+    color: orange;
+    background-color: transparent;
+}
+
+
+#accordionExample .accordion-button:hover {
+    box-shadow: 0 0 0 0.25rem rgba(255, 165, 0, 0.25);
+    color: orange;
+}
+
+#accordionExample .accordion-button:focus {
+    color: black !important;
+    font-weight: 500;
+    background-color: orange !important;
+    border-color: orange !important;
+    box-shadow: 0 0 0 0.25rem rgba(255, 165, 0, 0.25);
+
+}
+
+
+
+.subtitle b {
+    color: orange;
+}
+/* --------------------------------------------------------------------------- advise start----------------------------------------------------------- */
+.advise-form {
+    box-shadow: 2px;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 15px;
+}
+
+.form-header {
+    background-color: orange;
+    color: black;
+    font-size: 16px;
+    padding: 20px 0px 5px 0px;
+    border-radius: 15px 15px 0 0;
+}
+
+/* Change border color to orange on focus for input fields */
+.form-control:focus {
+    border-color: orange !important;
+    box-shadow: 0 0 0 0.25rem rgba(255, 165, 0, 0.25);
+}
+
+/* Apply the same style to the select dropdown */
+select.form-control:focus {
+    border-color: orange !important;
+    box-shadow: 0 0 0 0.25rem rgba(255, 165, 0, 0.25);
+}
+
+/* Hover effect on select options */
+select option:hover {
+    background-color: orange !important;
+    color: white;
+}
+
+/* Selected option effect */
+select option:checked {
+    background-color: orange !important;
+    color: white;
+}
+
+.description {
+    color: white;
+}
+
+.description span {
+    color: orange;
+}
+.content-list li b{
+color: orange;
+font-size: 20px;
+}
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .advise-form {
+        width: 100%; /* Full width for mobile */
+        max-width: none; /* Disable max-width for mobile */
+    }
+    .form-header p {
+        font-size: 1.2rem; /* Adjust font size for mobile */
+    }
+    .description {
+        font-size: 1.1rem; /* Adjust font size for mobile */
+    }
+    .description span {
+        font-size: 1.2rem; /* Adjust span font size */
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .description {
+        font-size: 1rem; /* Further adjust font size for very small screens */
+       
+    }
+   
+}
+
+
+
+/* -----------------------------------------------------------------end advise------------------------------------------------------- */
+
+/* ---------------------------------------------------counter start------------------------------------------  */
+
+#counter {
+    margin-top: 110px;
   }
+
+  #counter b {
+    display: block;
+    line-height: 1px;
+    color: orange;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .fs-1 {
+      font-size: 1.5rem;
+    }
+
+    .fs-2 {
+      font-size: 1.2rem;
+    }
+
+    .col-3 {
+      width: 100%; /* Stack the columns on smaller screens */
+      margin-bottom: 20px;
+    }
+
+    #counter {
+      margin-top: 60px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .fs-1 {
+      font-size: 1.2rem; /* Reduce font size even more for very small screens */
+    }
+
+    .fs-2 {
+      font-size: 1rem; /* Reduce font size for smaller screens */
+    }
+
+    #counter {
+      margin-top: 40px;
+    }
+  }
+  /* -------------------------------------end counter--------------------------------------------------  */
+/* -----------------------------------------trial start------------------------------------------------------ */
+#trial{
+    margin-top: 70px;
+    margin-bottom: 100px;
+}
+#trial h3 {
+    color: orange;
+    margin-top: 40px;
+}
+
+.call-button {
+    margin-top: 90px;
+}
+
+.call-button button {
+    width: 300px;
+    font-weight: bold;
+    color: black;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+.call-button button {
+width: 250px; /* Reduce button width on smaller screens */
+}
+
+#trial h3 {
+font-size: 1.5rem; /* Adjust heading font size */
+}
+
+.call-button {
+margin-top: 60px; /* Adjust margin on smaller screens */
+}
+
+/* Stack columns vertically on smaller screens */
+.trail .row{
+text-align: center;
+}
+
+.trial .col-6 {
+width: 100%; /* Make columns stack vertically */
+margin-bottom: 20px; /* Add spacing between the columns */
+}
+}
+
+@media (max-width: 576px) {
+#trial h3 {
+font-size: 1.3rem; /* Further adjust font size on very small screens */
+}
+
+.call-button button {
+width: 200px; /* Even smaller button width on very small screens */
+}
+
+}
+/* --------------------------------------------------------------end trial-------------------------------------------  */
+/* -----------------------------------------------------------start-------------------------------------------- */
+#accordionEx .accordion-item button {
+    color: black;
+    background-color: transparent;
+}
+
+#accordionEx .accordion-button:hover {
+    box-shadow: 0 0 0 0.25rem rgba(255, 165, 0, 0.25);
+    color: orange;
+}
+
+#accordionEx .accordion-button:focus {
+    color: black !important;
+    font-weight: 500;
+    background-color: orange !important;
+    border-color: orange !important;
+    box-shadow: 0 0 0 0.25rem rgba(255, 165, 0, 0.25);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .col-lg-6 {
+        width: 100%; /* Stack columns on smaller screens */
+    }
+
+    .accordion-button {
+        font-size: 1rem; /* Slightly smaller font on mobile */
+    }
+
+    /* Image adjustments for smaller screens */
+    .col-6 img {
+        width: 100%;
+        height: auto; /* Ensure image scales properly */
+    }
+}
+
+@media (max-width: 576px) {
+    .accordion-button {
+        font-size: 0.9rem; /* Smaller font size for very small screens */
+    }
+}
+/* -----------------------------------------------------------end-----------------------------------------  */
+/* --------------------------------------------------------faq start------------------------------------------  */
+.faq-column {
+    margin-bottom: 1.5rem;
+  }
+
+  #faqAccordionLeft .accordion-button:focus,
+  #faqAccordionRight .accordion-button:focus {
+    color: black !important;
+    font-weight: 500;
+    background-color: orange !important;
+    border-color: orange !important;
+    box-shadow: 0 0 0 0.25rem rgba(255, 165, 0, 0.25);
+  }
+
+  #faqAccordionLeft .accordion-button:hover,
+  #faqAccordionRight .accordion-button:hover {
+    box-shadow: 0 0 0 0.25rem rgba(255, 165, 0, 0.25);
+    color: orange;
+  }
+
+  #faqAccordionLeft .accordion-item button,
+  #faqAccordionRight .accordion-item button {
+    color: black;
+    background-color: transparent;
+  }
+/* ------------------------------------------end faq-----------------------------------------------  */
+
+/* ---------------------------------------------slider-------------------------------------------------------- */
+.owl-carousel .item {
+    margin: 5px;
+}
+
+.owl-carousel img {
+    width: 100%;
+    height: auto;
+} 
+
+/* Styling for navigation buttons */
+ .owl-nav button.owl-prev,
+.owl-nav button.owl-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    padding: 10px;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.owl-nav button.owl-prev {
+    left: 10px;
+    font-size: 90px !important;
+    color: orange !important;
+}
+
+.owl-nav button.owl-next {
+    right: 10px;
+    font-size: 90px !important;
+    color: orange !important;
+}
+/* --------------------------------------------end slider-------------------------------------------  */
+/* ------------------------------------certification start---------------------------- */
+
+#certification-b b{
+    color: orange;
+}
+
+
+
+/* --------------------------------------------end certification-------------------------------------------  */
+
+/* ------------------------------------text-reviews start---------------------------- */
+/* Custom styling */
+#text-review-slider .item {
+    margin: 15px;
+}
+
+.review-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* height: 300px;  Fixed height for the card */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.review-card p {
+    font-size: 16px;
+    color: #333;
+    flex-grow: 1;  /* Allow text to take remaining space */
+}
+
+.review-card .name {
+    font-weight: bold;
+    color: orange;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 22px;
+}
+
+/* Styling for navigation buttons */
+.owl-nav button.owl-prev,
+.owl-nav button.owl-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    padding: 10px;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.owl-nav button.owl-prev {
+    font-size: 80px !important;
+    color: orange !important;
+    left: 1px;
+}
+
+.owl-nav button.owl-next {
+    font-size: 80px !important;
+    color: orange !important;
+    right: 1px;
+}
+
+/* ------------------------------------end text-reviews ---------------------------- */
+/* --------------------------------------------------------------related-course start--------------------------------------------- */
+
+#related-course li span,h1{
+    color: orange;
+}
+#related-course a{
+    text-decoration: none;
+    color: black;
+}
+#related-course a:hover{
+    color: orange;
+}
+/* -------------------------------------------------------end related-course------------------------------------------- */
+
+
+
+/* --------------------------------------- start course-list--------------------------------------------------- */
+
+#course-list li{
+    width: 380px;
+    background-color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    margin-right: 5px;
+    margin-bottom: 5px;
+  
+}
+/* ---------------------------------------end course-list--------------------------------------------------- */
+/* ---------------------------------------video reviews stat--------------------------------------------------- */
+
+  /* Custom styling */
+  #youtube-review-slider .item {
+    margin: 15px;
+}
+
+#youtube-review-slider .review-card {
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+/* Make iframe responsive */
+.youtube-iframe {
+    width: 100%;
+    height: 315px;
+}
+#youtube-review-slider .review-card .title {
+    font-weight: bold;
+    color: orange;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 22px;
+}
+#youtube-review-slider .review-card .text{
+    text-align: center;
+    font-weight: 500;
+}
+#youtube-review-slider .owl-nav button.owl-prev {
+    font-size: 80px !important;
+    color: white !important;
+    left: 1px;
+}
+
+#youtube-review-slider .owl-nav button.owl-next {
+    font-size: 80px !important;
+    color: white!important;
+    right: 1px;
+}
+/* Styling for navigation buttons */
+/* .owl-nav button.owl-prev,
+.owl-nav button.owl-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    padding: 10px;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+} */
+
+
+
+/* Media Queries for responsiveness */
+/* @media (max-width: 768px) {
+    .review-card {
+        padding: 15px;
+        font-size: 14px;
+    }
+
+    .review-card .title {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 576px) {
+    .review-card {
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .review-card .title {
+        font-size: 16px;
+    }
+} */
+/* ---------------------------------------end video reviews --------------------------------------------------- */
+/* <!-- ------------------------------------------------------------------------------Tachnology start-------------------------------------------  --> */
+
+  /* Custom styling */
+  .technology-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.technology-card i {
+    font-size: 50px;
+    color: orange;
+}
+
+.technology-card h5 {
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.technology-card p {
+    font-size: 14px;
+    color: #777;
+}
+
+.technology-card:hover {
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+}
+/* <!-- ------------------------------------------------------------------------------ end Tachnology -------------------------------------------  --> */
+/* #footerstyle ul a {
+
+background-color: red;
+color: blue;
+} */

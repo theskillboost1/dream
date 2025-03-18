@@ -4,19 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>C++ programming language Course in Chandigarh & Mohali | Learn C++ at The Skill Boost</title>
-    <meta name="description" 
-        content="Advance your programming skills with C++ Course in Chandigarh & Mohali. Learn data structures, algorithms,  OOP,  advanced coding techniques , and more in this comprehensive C++ course.">
+    <title>Backend Development Training in Chandigarh & Mohali | The Skill Boost</title>
+    <meta name="description"
+        content="Enroll in our highly regarded back-end development courses in Chandigarh & Mohali. Learn server-side architecture, databases, APIs, and programming languages for efficient web development.">
+
     <link rel="stylesheet" href="../css/bootstrap.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="./style2.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="../images/fav.png">
     <link rel="stylesheet" href="../header.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-
     <!-- Add FontAwesome Icons (for displaying icons for technologies) -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <!-- Add jQuery -->
@@ -31,24 +33,92 @@
     <script src="videoreview.js"></script>
 
     <style>
-        /* body{
-            height: 2000px;
-        } */
+        .popup {
+            z-index: 10000;
+            position: fixed;
+            height: 100vh;
+            width: 100vw;
+            background-color: rgba(255, 255, 255, 0.71);
+            display: none;
+        }
+
+        .popup-container {
+            width: 600px;
+            background-color: black;
+            padding: 50px;
+            border-radius: 20px;
+            position: relative;
+        }
+
+        .fa-close {
+            right: 30px;
+            top: 30px;
+        }
     </style>
-
-
 </head>
 
 <body class=" ">
+    <div class="popup  text-white" id="Popup">
+        <div class="d-flex justify-content-center align-items-center h-100">
+            <div class="popup-container">
+                <div class="fa fa-close fa-2x position-absolute" onclick="Close()"></div>
+                <script>
+                    function Open() {
+                        var Popup = document.getElementById('Popup')
+                        Popup.style.display = "block"
+                    }
+                    function Close() {
+                        var Popup = document.getElementById('Popup');
+                        Popup.style.display = "none";
+                    }
+                </script>
+                <h2 class="text-warning py-3 ">Fill Form for Booking</h2>
+                <form action="https://the-skill-boost-server.onrender.com/dashboard1/createblog" method="post">
+                    <div class="">
+                        <label class="form-label">Name</label>
+                        <input type="text" class="form-control" name="Title" id="">
+                    </div>
+                    <div class="">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control" id="slugg2" name="email">
+                    </div>
+                    <div class="">
+                        <label class="form-label">Phone</label>
+                        <input type="text" class="form-control" id="slugg2" name="">
+                    </div>
+                    <div class="">
+                        <label class="form-label">Qualification</label>
+                        <input type="text" class="form-control" id="slugg2" name="Qualification">
+                    </div>
+                    <div class="mb-3" hidden>
+                        <label class="form-label">Date</label>
+                        <input type="date" class="form-control" name="Date" id="dateInput">
+                    </div>
 
-    <div class="header">
-        <div class="progress-container">
-            <div class="progress-bar" id="progressBar"></div>
+                    <script>
+                        window.onload = function () {
+                            // Set default date
+                            const today = new Date();
+                            const yyyy = today.getFullYear();
+                            const mm = String(today.getMonth() + 1).padStart(2, '0');
+                            const dd = String(today.getDate()).padStart(2, '0');
+                            const formattedDate = `${yyyy}-${mm}-${dd}`;
+                            document.getElementById('dateInput').value = formattedDate;
+
+                        };
+                    </script>
+                    <div class="mb-3">
+                        <label class="form-label">Course</label>
+                        <input class="form-control" name="Description">
+                    </div>
+
+                    <input type="submit" class="btn btn-outline-light">
+                </form>
+            </div>
         </div>
     </div>
-
-
     <div class="fa fa-arrow-circle-o-up fa-3x daa" onclick="up()"></div>
+
 
     <script>
         function up() {
@@ -57,12 +127,20 @@
     </script>
 
 
+
     <div class="whtsppp d-flex justify-content-center align-items-center">
         <a href="https://wa.me/8360686961" class="whatsapp-button" target="_blank">
             <span class="whatsapp-text">Chat With Us</span>
             <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"
                 class="whatsapp-icon">
         </a>
+    </div>
+
+
+    <div class="header">
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
     </div>
     <!-- navbar -->
     <nav class="navbar navbar-expand-md navbar-dark bg-black position-sticky"
@@ -90,43 +168,43 @@
                         <div class="dropdown-content" style="min-width: 200px; overflow: hidden;">
 
                             <li class="limain">
-                                <a href="./Fullstack.html">Web Development </a>
+                                <a href="Fullstack-Web-Development-Chandigarh.html">Web Development </a>
                                 <div class="divv">
-                                    <a href="./Fullstack.html" class="text-dark">Web Development </a>
+                                    <a href="Fullstack-Web-Development-Chandigarh.html" class="text-dark">Web Development </a>
                                 </div>
                             </li>
 
                             <li class="limain">
-                                <a href="./webdesign.html"> Web Designing </a>
+                                <a href="web-design-chandigarh.html"> Web Designing </a>
                                 <div class="divv">
-                                    <a href="./webdesign.html" class="text-dark"> Web Designing </a>
+                                    <a href="web-design-chandigarh.html" class="text-dark"> Web Designing </a>
                                 </div>
                             </li>
 
                             <li class="limain">
-                                <a href="./Fullstack.html"> Full Stack Development </a>
+                                <a href="Fullstack-Web-Development-Chandigarh.html"> Full Stack Development </a>
                                 <div class="divv">
-                                    <a href="./Fullstack.html" class="text-dark"> Full Stack Development </a>
+                                    <a href="Fullstack-Web-Development-Chandigarh.html" class="text-dark"> Full Stack Development </a>
                                 </div>
                             </li>
 
                             <li class="limain">
-                                <a href="./mernstack.html"> MERN Stack </a>
+                                <a href="mern-stack-course-chandigarh.html"> MERN Stack </a>
                                 <div class="divv">
-                                    <a href="./mernstack.html" class="text-dark">MERN Stack</a>
+                                    <a href="mern-stack-course-chandigarh.html" class="text-dark">MERN Stack</a>
                                 </div>
                             </li>
 
                             <li class="limain">
-                                <a href="./mernstack.html"> MEAN Stack </a>
+                                <a href="mern-stack-course-chandigarh.html"> MEAN Stack </a>
                                 <div class="divv">
-                                    <a href="./mernstack.html" class="text-dark">MEAN Stack</a>
+                                    <a href="mern-stack-course-chandigarh.html" class="text-dark">MEAN Stack</a>
                                 </div>
                             </li>
                             <li class="limain">
-                                <a href="./Courses/mernstack.html"> Digital Marketing </a>
+                                <a href="digital-marketing-course-chandigarh.html"> Digital Marketing </a>
                                 <div class="divv">
-                                    <a href="./digitalmarketing.html" class="text-dark">Digital Marketing</a>
+                                    <a href="digital-marketing-course-chandigarh.html" class="text-dark">Digital Marketing</a>
                                 </div>
                             </li>
 
@@ -135,8 +213,8 @@
                     </div>
 
                     <!-- <li class="nav-item">
-                 <a class="nav-link text-white" href="#Language">Languages</a>
-             </li> -->
+                   <a class="nav-link text-white" href="#Language">Languages</a>
+               </li> -->
 
 
                     <div class="dropdown">
@@ -145,47 +223,48 @@
                         </li>
                         <div class="dropdown-content" style="min-width: 200px; overflow: hidden;">
 
+
+
                             <li class="limain">
-                                <a href="../Courses/clang.html"> C Language</a>
+                                <a href="c-programming-course-chandigarh.html"> C Language</a>
                                 <div class="divv">
-                                    <a href="../Courses/clang.html" class="text-dark">C Language </a>
+                                    <a href="c-programming-course-chandigarh.html" class="text-dark">C Language </a>
                                 </div>
                             </li>
                             <li class="limain">
-                                <a href="../Courses/c++.html"> C++ Language </a>
+                                <a href="../Courses/c-plus-plus-programming-chandigarh.html"> C++ Language </a>
                                 <div class="divv">
-                                    <a href="../Courses/clang.html" class="text-dark"> C++ Language</a>
+                                    <a href="../Courses/c-plus-plus-programming-chandigarh.html" class="text-dark"> C++ Language</a>
                                 </div>
                             </li>
 
                             <li class="limain">
-                                <a href="../Courses/java.html"> Java </a>
+                                <a href="../Courses/java-course-chandigarh.html"> Java </a>
                                 <div class="divv">
-                                    <a href="../Courses/java.html" class="text-dark"> Java </a>
+                                    <a href="../Courses/java-course-chandigarh.html" class="text-dark"> Java </a>
                                 </div>
                             </li>
 
                             <li class="limain">
-                                <a href="../Courses/javascript.html"> JavaScript</a>
+                                <a href="../Courses/javascript-course-chandigarh.html"> JavaScript</a>
                                 <div class="divv">
-                                    <a href="../Courses/javascript.html" class="text-dark"> JavaScript </a>
+                                    <a href="../Courses/javascript-course-chandigarh.html" class="text-dark"> JavaScript </a>
                                 </div>
                             </li>
 
                             <li class="limain">
-                                <a href="../Courses/python.html"> Python </a>
+                                <a href="../Courses/python-course-chandigarh.html"> Python </a>
                                 <div class="divv">
-                                    <a href="../Courses/python.html" class="text-dark">Python</a>
+                                    <a href="../Courses/python-course-chandigarh.html" class="text-dark">Python</a>
                                 </div>
                             </li>
 
                             <li class="limain">
-                                <a href="../Courses/htmlcss.html">HTML/CSS </a>
+                                <a href="../Courses/html-css-course-chandigarh.html">HTML/CSS </a>
                                 <div class="divv">
-                                    <a href="../Courses/htmlcss.html" class="text-dark">HTML/CSS</a>
+                                    <a href="../Courses/html-css-course-chandigarh.html" class="text-dark">HTML/CSS</a>
                                 </div>
                             </li>
-
 
 
 
@@ -205,15 +284,14 @@
                         <a title="" class="nav-link text-dark  rounded-pill px-3 mx-2 my-md-0 my-1" id="signup"
                             href="tel:9653675538">Call Now </a>
                     </li>
-
                     <!-- <li class="nav-item">
-                 <a title="DON'T Touch" class="nav-link text-dark  rounded-pill px-3 mx-2 my-md-0 my-1"
-                     id="signup" href="#">Signup</a>
-             </li>
-             <li class="nav-item">
-                 <a title="DON'T Touch" class="nav-link rounded-pill px-3 mx-2 my-md-0 my-1" id="login"
-                     href="#">Login</a>
-             </li> -->
+                   <a title="DON'T Touch" class="nav-link text-dark  rounded-pill px-3 mx-2 my-md-0 my-1"
+                       id="signup" href="#">Signup</a>
+               </li>
+               <li class="nav-item">
+                   <a title="DON'T Touch" class="nav-link rounded-pill px-3 mx-2 my-md-0 my-1" id="login"
+                       href="#">Login</a>
+               </li> -->
                 </ul>
 
 
@@ -223,41 +301,44 @@
 
     <!-- end of nav -->
 
-    <div class="container bg-white  ">
+    <div class="container bg-white">
 
         <div class="row">
-            <div class="col-md-6 ps-sm-5 ps-2 textcourse mb-3">
-                <h1 class="text-dark ">C++ Language</h1><br>
-                <h5 class="subtitle"> Elevate Your Career with the <b>
-                        Best C++ Programming Training in Mohali & Chandigarh</b></h5>
-                <p class="display-7">Ready to master C++? Our C++ Programming Training in Mohali and Chandigarh equips
-                    you with essential skills in OOP, data structures, algorithms, and memory management.
+            <div class="col-md-7 ps-sm-5 ps-2 textcourse mb-3">
+                <h1 class="text-dark ">Back-end Development</h1><br>
 
-                    Ideal for beginners and professionals, this course prepares you for roles like C++ Developer,
-                    Software Engineer, or Game Developer. With hands-on projects and job placement assistance, you'll be
-                    job-ready in no time.
+                <h5 class="subtitle"> Advance Your Career with the <b>
+                        Best Back-End Development Training in Mohali & Chandigarh</b></h5>
+                <p class="display-7">Looking to elevate your career? Our Back-End Development Training in Mohali and
+                    Chandigarh equips you with the skills to build high-performance web applications. Master key
+                    technologies like Node.js, Express.js, Python, Django, PHP, MySQL, MongoDB, and RESTful APIs through
+                    expert-led instruction and hands-on projects.
 
-                    Enroll today and take your programming skills to the next level!
+                    Whether you're a beginner or an experienced developer, this course provides the foundation to excel
+                    in back-end development. Gain real-world experience, work on industry projects, and receive job
+                    placement assistance to secure top roles such as Back-End Developer, Software Engineer, Database
+                    Administrator, and API Developer.
                 </p>
-                <a href="#Advise-form"><button class="btn orange border border-warning">Book
-                        Now</button></a>
-
+                <button class="btn orange border border-warning" onclick="Open()">Book
+                    Now</button>
+                <!-- <a href="#Advise-form"><button class="btn orange border border-warning">Book
+                        Now</button></a> -->
                 <!-- <button class="btn btn-secondary btn-outline-warning rounded   -pill mx-3">Learn More</button> -->
 
             </div>
 
             <!-- <img class="headerimg" src="../images/Web Development - The skill boost.png" alt="web development"> -->
-            <div class="col-md-6 my-md-0 my-3 m-auto">
+            <div class="col-md-5 my-md-0 my-3 m-auto">
                 <div class="card ms-md-3 mx-md-0 mx-auto ms-md-auto cardcourse shadow border-0 bg-white"
                     style="max-width: 21rem; height: 450px;   ">
-                    <div class="card-img p-4">
-                        <img src="../images/c++logo.jpg" alt="Web designing training" class="card-img-top">
+                    <div class="card-img">
+                        <img src="../images/backend.jpg" alt="Back-end development Training" class="card-img-top">
                     </div>
 
 
                     <div class="card-body text-center"><br>
-                        <h3>C++ Language</h3>
-                        <p>Course duration : 45 Days </p>
+                        <h3>Back-end Development</h3>
+                        <p>Course duration : 3 months </p>
                         <pre>ISO Certification &check;</pre>
                         <a href="#Design" class="btn orange border border-warning">Learn More</a><br><br>
 
@@ -313,26 +394,25 @@
 
                 <!-- Content Section -->
                 <div class="col-md-7 col-sm-12">
-                    <h4 class="description pt-5 pb-2">Unlock Career Opportunities with <span>Best C++ Programming
-                            Training in Mohali</span></h4>
+                    <h4 class="description pt-5 pb-2">Unlock Career Opportunities with the <span>Best Back-End
+                            Development Training in Mohali</span></h4>
                     <p class="mb-3">
-                        Our C++ Programming Training in Mohali is designed to take you through the essential concepts
-                        and advanced techniques in C++ programming. You will master key topics like object-oriented
-                        programming (OOP), data structures (like lists, trees, and graphs), and algorithms, allowing you
-                        to build fast, scalable, and efficient software solutions for a variety of applications.
-
-                        Under the guidance of experienced instructors, you’ll get hands-on experience working on
-                        real-world projects that simulate industry challenges. Whether you’re a beginner or have some
-                        coding experience, this course will help you refine your skills and build a strong portfolio for
-                        future job opportunities.
-
-                        By enrolling in the Best C++ Programming Course in Mohali and Chandigarh, you’ll be ready to
-                        apply for positions such as C++ Developer, Game Developer, Software Engineer, and more. With job
-                        placement assistance and expert mentorship, we’ll ensure you have the support you need to land
-                        your dream job.
-
-                        Start your journey today, and gain the skills necessary to become a proficient C++ programmer in
-                        one of the most in-demand languages in the tech world!
+                        Our Back-End Development Training in Mohali offers an in-depth exploration of server-side
+                        technologies and back-end design principles. You’ll master core back-end technologies like PHP,
+                        Node.js, Python, and databases, enabling you to create scalable and dynamic applications that
+                        power the front-end of websites and apps.
+                        <br>
+                        Under the guidance of expert instructors, you’ll work on real-world projects, gaining hands-on
+                        experience in developing and maintaining back-end systems. Whether you’re a beginner or looking
+                        to refine your skills, this course is designed to give you the tools and knowledge needed to
+                        excel in back-end development.
+                        <br>
+                        By enrolling in the Best Back-End Website Development course in Mohali and Chandigarh, you’ll be
+                        prepared for roles such as Back-End Developer, Database Administrator, and Full-Stack Developer.
+                        With job placement assistance and personalized mentorship, you’ll be well-equipped to embark on
+                        a successful career in back-end development.
+                        <br>
+                        Get started today and unlock exciting career opportunities in the field of back-end development!
                     </p>
 
 
@@ -346,53 +426,66 @@
         <div class="container">
             <div class="row text-start">
                 <h1 class="text-center mb-5">Why Choose <span class="text-light"> The Skill Boost</span> Institute for
-                    C++ Programming in Mohali?
+                    Back-End Development in Mohali?
                 </h1>
                 <div class="row">
                     <div class="col-md-6">
                         <ul type="none" class="content-list">
                             <li><b>Hands-on Experience:</b> At The Skill Boost Institute, we emphasize learning by
-                                doing. Throughout the course, you will work on real-world projects where you will apply
-                                your C++ knowledge to solve practical problems. You’ll develop skills like memory
-                                management, data structures, algorithms, and object-oriented programming that are
-                                essential for building high-performance applications.</li>
-                            <li><b>Experienced Trainers:</b> Our instructors are industry experts with years of
-                                experience in C++ software development. They will guide you through the learning
-                                process, provide valuable insights from the field, and offer personalized mentorship to
-                                ensure you succeed in mastering C++.</li>
-                            <li><b>Flexible Timings:</b> We understand that students have different schedules, which is
-                                why we offer flexible learning options. You can choose from part-time or full-time
-                                courses based on your availability. Our evening batch (6 PM to 9 PM) ensures you can
-                                pursue your training without disrupting your daily routine.
+                                doing. As a back-end development student, you’ll work on real-world projects using
+                                technologies like PHP, Node.js, Python, and databases. This practical approach helps you
+                                gain the skills needed to develop high-performance back-end systems.</li>
+                            <li><b>Experienced Trainers:</b> Experienced Trainers in Back-End Website Development:
+                                Our trainers are seasoned professionals with years of experience in back-end
+                                development. They will guide you through the learning process, offering personalized
+                                mentorship to ensure you’re fully prepared for the challenges of back-end development.
                             </li>
-                            <li><b>Special Batch (6 PM to 9 PM):</b> For professionals and students with day-time
-                                commitments, we offer evening batches from 6 PM to 9 PM, making it easier for you to
-                                balance your studies and work-life commitments.
-                            </li>
-                            
+
+                            <li><b>Flexible Timings:</b>
+                                We understand that everyone has different schedules. That's why we offer flexible
+                                training options, including both part-time and full-time courses. This allows you to
+                                balance your learning with other commitments while pursuing back-end development
+                                training in Mohali.</li>
+
+                            <li><b>Special Batch (6 PM to 9 PM):</b>
+
+                                For those with daytime commitments, we offer a special evening batch from 6 PM to 9 PM,
+                                making it easy for you to pursue back-end website development training without
+                                disrupting your daily routine.</li>
+
+                         
+
+
+
+
+
+
                         </ul>
                     </div>
                     <div class="col-md-6">
                         <ul type="none" class="content-list">
-                            <li><b>Job Placement Assistance:</b> The Skill Boost Institute is dedicated to helping you
-                                kickstart your career in C++ programming. Our job placement assistance connects you with
-                                top employers in the software development industry who are looking for skilled C++
-                                developers. We will support you throughout your job search.</li>
+                            <li><b>Job Placement Assistance:</b>
 
-                            <li><b>Interview Preparation:</b>We help you prepare for your job interviews by offering
-                                weekly interview preparation sessions. These sessions cover both technical and
-                                behavioral aspects, ensuring you’re well-prepared to ace interviews for C++ development
-                                roles.
-                            </li>
-                            <li><b>Friendly Environment:</b> At The Skill Boost Institute, we foster a supportive
-                                learning environment where you can ask questions, engage with peers, and collaborate on
-                                projects. Our goal is to ensure you feel confident and motivated throughout your
-                                learning journey.</li>
-                            <li><b>Affordable & Quality Training:</b> We aim to provide high-quality C++ programming
-                                training at competitive prices, offering exceptional value for your investment. You’ll
-                                get a comprehensive education in C++ without breaking the bank.
+                                The Skill Boost Institute is dedicated to helping you launch your career in back-end
+                                development. Our job placement assistance connects you with top employers in the
+                                industry, giving you the opportunity to apply for back-end development roles that match
+                                your newly acquired skills.</li>
 
+                            <li><b>Interview Preparation:</b>
+                                To ensure your success, we offer interview preparation sessions every Saturday. Our
+                                interview prep includes technical and soft skills training, helping you confidently
+                                navigate interviews for back-end development roles in today’s competitive job market.
                             </li>
+
+                            <li><b>Friendly Environment:</b>
+                                We foster a positive and collaborative learning environment at The Skill Boost
+                                Institute, where you’ll feel comfortable asking questions, collaborating with peers, and
+                                receiving ongoing support throughout your learning journey.</li>
+
+                            <li><b>Affordable & Quality Training:</b>
+                                We provide high-quality back-end website development training at competitive prices. Our
+                                goal is to offer exceptional value so you can gain the best education in back-end
+                                development without straining your budget.</li>
                         </ul>
                     </div>
                 </div>
@@ -409,8 +502,10 @@
 
 
         <div class="container ">
-            <h1 class="text-center mt-5 ">What Makes <span class="text-light">The Skill Boost</span>the Best C++
-                Programming Course in Chandigarh?</h1>
+            <h1 class="text-center mt-5 ">What Makes <span class="text-light">The Skill Boost</span> the Best Back-End
+                Development Course in Chandigarh?
+
+            </h1>
             <div class="row">
                 <div class="col-12 col-lg-6">
                     <div class="accordion" id="accordionEx">
@@ -419,17 +514,19 @@
                             <h2 class="accordion-header" id="heading1">
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    Why is The Skill Boost C++ Programming course considered the best in Mohali and
+                                    Why is The Skill Boost Back-End Development course considered the best in Mohali and
                                     Chandigarh?
                                 </button>
                             </h2>
                             <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="heading1"
                                 data-bs-parent="#accordionEx">
                                 <div class="accordion-body">
-                                    The Skill Boost Institute offers a comprehensive curriculum covering core C++
-                                    concepts such as OOP, memory management, algorithms, and data structures. We
-                                    emphasize hands-on learning through real-world projects, ensuring you develop
-                                    practical skills that are highly sought after in the industry.
+                                    The Skill Boost Institute offers a comprehensive curriculum focusing on back-end
+                                    technologies like PHP, Node.js, Python, and databases. We emphasize hands-on
+                                    learning through real-world projects to make you proficient in building scalable
+                                    back-end systems. With expert trainers, job placement assistance, and flexible
+                                    learning options, we are the best choice for back-end development in Chandigarh and
+                                    Mohali.
                                 </div>
                             </div>
                         </div>
@@ -439,15 +536,15 @@
                             <h2 class="accordion-header" id="heading2">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    Does The Skill Boost provide real-world experience in C++ programming?
+                                    Does The Skill Boost provide real-world experience in Back-End Website Development?
                                 </button>
                             </h2>
                             <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="heading2"
                                 data-bs-parent="#accordionEx">
                                 <div class="accordion-body">
-                                    Yes! Our course is designed around real-world projects and coding challenges that
-                                    simulate industry scenarios. This approach ensures that you gain the hands-on
-                                    experience necessary to become a proficient C++ developer.
+                                    Yes! Our approach prioritizes hands-on learning. You will work on live projects that
+                                    simulate industry challenges, ensuring you gain the practical experience and
+                                    confidence required to excel in back-end development.
                                 </div>
                             </div>
                         </div>
@@ -457,16 +554,16 @@
                             <h2 class="accordion-header" id="heading3">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    How do the trainers at The Skill Boost help in mastering C++ programming?
+                                    How do the trainers at The Skill Boost help in mastering back-end development?
                                 </button>
                             </h2>
                             <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="heading3"
                                 data-bs-parent="#accordionEx">
                                 <div class="accordion-body">
-                                    Our trainers are experienced professionals who have worked with C++ in various
-                                    industries. They provide expert guidance, share real-world insights, and ensure you
-                                    gain up-to-date knowledge, making you ready for the challenges of the C++
-                                    programming field.
+                                    Our trainers are industry professionals with vast experience in back-end website
+                                    development. They provide mentorship and share valuable insights, ensuring you
+                                    acquire up-to-date knowledge and skills, preparing you for the real-world challenges
+                                    of back-end development.
                                 </div>
                             </div>
                         </div>
@@ -482,10 +579,11 @@
                             <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="heading4"
                                 data-bs-parent="#accordionEx">
                                 <div class="accordion-body">
-                                    Yes! We understand that many of our students have busy schedules. We offer both
-                                    full-time and part-time courses, with a special evening batch (6 PM to 9 PM) for
-                                    professionals who want to enhance their C++ skills while maintaining their current
-                                    work commitments.
+                                    Yes! We offer both full-time and part-time courses, along with a special evening
+                                    batch (6 PM to 9 PM) to accommodate working professionals in Mohali and Chandigarh
+                                    who are interested in back-end website development.
+
+
                                 </div>
                             </div>
                         </div>
@@ -495,16 +593,20 @@
                             <h2 class="accordion-header" id="heading5">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                    How does The Skill Boost support job placement after completing the C++ course?
+                                    How does The Skill Boost support job placement after completing the Back-End
+                                    Development course?
+
                                 </button>
                             </h2>
                             <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="heading5"
                                 data-bs-parent="#accordionEx">
                                 <div class="accordion-body">
-                                    The Skill Boost Institute provides strong job placement assistance, helping you
-                                    connect with top employers seeking skilled C++ developers. Our interview preparation
-                                    sessions, combined with career guidance, ensure you’re fully prepared to land your
-                                    ideal job.
+                                    We provide robust job placement assistance by connecting you with top employers who
+                                    are actively seeking skilled back-end developers. Our weekly interview preparation
+                                    sessions, along with guidance throughout the hiring process, ensure you're
+                                    well-prepared to land your dream job.
+
+
                                 </div>
                             </div>
                         </div>
@@ -512,8 +614,7 @@
                 </div>
 
                 <div class="col-12 col-lg-6 pt-5">
-                    <img src="../images/b-c++ programming language website.jpg" class="img-fluid"
-                        alt="Web Designing Image">
+                    <img src="../images/b-backend development website.jpg" class="img-fluid" alt="Back-end development Training">
                 </div>
             </div>
         </div>
@@ -524,14 +625,13 @@
         <div class="container my-5" id="certification-b">
             <h1 class="text-light text-center mb-5">What you will Get at <b>The Skill Boost ?</b>
             </h1>
-            <p class="text-center ">By enrolling in the best C++ Programming Course in Mohali and Chandigarh at<b> The
-                    Skill Boost Institute</b>, you’ll earn an ISO-certified qualification that enhances your global
-                recognition. Our hands-on training ensures you gain real-world experience in C++ programming, including
-                advanced topics such as object-oriented programming, algorithms, and memory management. With the skills
-                and knowledge gained from this course, you will be well-prepared to pursue a successful career in C++
-                programming and stand out in the competitive job market.
-
-                Start today and master C++ programming with the best C++ course in Mohali and Chandigarh!
+            <p class="text-center ">At <b> The Skill Boost Institute</b>, enroll in the best Back-End Website
+                Development course in Mohali and Chandigarh and earn an ISO certified qualification. Our hands-on
+                training ensures you gain practical expertise in back-end technologies such as PHP, Node.js, Python, and
+                databases. With a focus on real-world projects and job-ready skills, we prepare you for a successful
+                career in back-end website development, giving you the credibility and confidence needed to stand out in
+                the competitive job market. Get started today and become a skilled back-end developer with the best
+                back-end website development training in Mohali and Chandigarh!
             </p>
 
             <!-- Owl Carousel -->
@@ -589,42 +689,46 @@
 
         <!-- -----------------------------------------------------------------------key Features start-------------------------------------------------------------  -->
 
-
         <div class="container">
             <div class="row px-md-5  ">
                 <h1 class=" ps-4 pb-5 text-center">Key Features</h1>
                 <div class="col-md-6">
                     <ul class="d-flex flex-column list-text ps-0">
                         <li class="	pb-2 list-group-item "><span class="fa fa-check-circle text-warning"></span>
-                            Engaging lectures covering theoretical aspects of C++ with practical examples.
-                        </li>
+                            Server-side logic and processing.</li>
                         <li class=" pb-2 list-group-item "><span class="fa fa-check-circle text-warning"></span>
-                            Practical exercises and coding labs to apply concepts and build real-world applications.
+                            Database management and optimization.
                         </li>
-
+                        <li class=" pb-2 list-group-item"><span class="fa fa-check-circle text-warning"></span> API
+                            design and implementation.
+                        </li>
                         <li class="	 pb-2 list-group-item"><span class="fa fa-check-circle text-warning"></span>
-                            Periodic assessments to test understanding and application of key concepts.</li>
-                        <li class=" pb-2 list-group-item"><span class="fa fa-check-circle text-warning"></span> Coding
-                            assignments to practice and reinforce learning.
+                            Security and authentication measures.
                         </li>
-
+                        <li class=" pb-2 list-group-item"><span class="fa fa-check-circle text-warning"></span>
+                            Scalability and performance tuning.
+                        </li>
                     </ul>
                 </div>
                 <div class="col-md-6">
                     <ul class="d-flex flex-column list-text ps-0">
                         <li class="	pb-2 list-group-item"><span class="fa fa-check-circle text-warning"></span>
-                            Comprehensive projects to showcase proficiency and practical application of C++ skills.
-                        </li>
-                        <li class=" pb-2 list-group-item"><span class="fa fa-check-circle text-warning"></span>
-                            Analysis of case studies to demonstrate the application of C++ features in solving complex
-                            problems.
+                            Performance tuning for optimal responsiveness.
                         </li>
                         <li class="	pb-2 list-group-item"><span class="fa fa-check-circle text-warning"></span>
-                            Access to C++ documentation, tutorials, and forums for additional support and learning.</li>
+                            Scalability through efficient architecture design.
+                        </li>
                         <li class=" pb-2 list-group-item"><span class="fa fa-check-circle text-warning"></span>
-                            100% Placement Assistancy</li>
-                        <li class=" pb-2 list-group-item"><span class="fa fa-check-circle text-warning"></span>
-                            Certified Certificate of completion(With Global & Lifetime Access) </li>
+                            Logging and monitoring for debugging.
+                        </li>
+                        <li class=" pb-2 list-group-item"><span class="fa fa-check-circle text-warning"></span> Database
+                            integration and query optimization.
+                        </li>
+                        <li class="	 pb-2 list-group-item"><span class="fa fa-check-circle text-warning"></span>
+                            Deployment automation and DevOps integration.
+
+
+                        </li>
 
 
                     </ul>
@@ -633,8 +737,7 @@
         </div>
 
     </div>
-
-    <!-- ----------------------------------------------------------------------------- End key features ----------------------------------------  -->
+    <!-- -----------------------------------------------------------------------key Features start-------------------------------------------------------------  -->
     <!-- --------------------------------------------------------------------------Free Trial-------------------------------------------------------------------------------------->
 
     <div class="container bg-white text-light pb-4 " id="trial">
@@ -659,97 +762,206 @@
     <div class="container-fluid bg-light">
         <div class="container">
             <div class="row" id="Design">
-
+                <h1 class="pt-5 text-center">Back-end website Development Syllabus</h1>
                 <div class="col-md-5 py-5 ">
 
-                    <img src="../images/c++3.jpg" alt="Python Development.." width="90%">
+                    <img src="../images/backend1.jpeg.jpg" alt="Back-end development Training" width="90%">
                 </div>
 
                 <div class="col-md-7 pb-5 ">
-                    <h1 class="pt-5 text-center">C++ Programming Language</h1>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <ul>
-                                <li>History of C++ Language</li>
-                                <li>Introduction of C++ Language </li>
 
-                                <li>Syntax of C++ Language</li>
-                                <li>Comments C++ Language</li>
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    HTML Syllabus in Back-end Website Development
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="row">
+                                        <div class="col-sm-6">
 
-                                <li>Variables of C++ Language </li>
-                                <li>Data Types of C++ Language</li>
-                                <li>Operators of C++ Language</li>
+                                            <ul>
+                                                <li>Introduction Of HTML</li>
+                                                <li>HTML Elements , Attributes , Tags , Headings , Paragraph</li>
+                                                <li>HTML Formatting </li>
+                                                <li>HTML Images , Favicons</li>
 
-                                <li>User Input of C++ Language </li>
-                                <li>Strings of C++ Language</li>
-
-
-
-
-
-                            </ul>
-                        </div>
-                        <div class="col-md-6">
-                            <ul>
-                                <li>Switch Statements of C++ Language</li>
-                                <li>Conditional Statements of C++ Language </li>
-                                <li>Looping of C++ Language(For/while/Do)</li>
-                                <li>Array of C++ Language</li>
-                                <li>Break of C++ Language</li>
-                                <li>Continue of C++ Language</li>
-
-                                <li>Functions of C++ Language(Parameters/overloading)</li>
-
-                                <li>References of C++ Language</li>
-                                <li>Pointers of C++ Language</li>
-
-
-                            </ul>
-
-
-
-                        </div>
-                        <h1 class="pt-5 text-center">OOPS In C++ Programming Language</h1>
-                        <div class="row">
-                            <div class="col-md-6">
-
-                                <ul>
-                                    <li>Classes/Objects/Methods of C++ Language</li>
-                                    <li>Access Specifiers of C++ Language</li>
-                                    <li>Constructors of C++ Language</li>
-
-
-                                </ul>
-
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <ul>
+                                                <li>HTML Table , Form , List</li>
+                                                <li>HTML Classes & ID , Iframes</li>
+                                                <li>HTML Responsive</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    CSS Syllabus in Back-end Website Development
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="row">
+                                        <div class="col-sm-6">
 
-                            <div class="col-md-6">
+                                            <ul>
+                                                <li>Introduction Of CSS</li>
+                                                <li>CSS Colors , Gradients, Selectors</li>
+                                                <li>CSS Margin & Padding , Box Model </li>
+                                                <li>CSS Text , Fonts , Icons , Links</li>
 
-                                <ul>
-                                    <li>Encapsulation of C++ Language</li>
-                                    <li>Inheritance of C++ Language</li>
-                                    <li>Polymorphism of C++ Language</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <ul>
+                                                <li>CSS Lists , Tables , Forms</li>
+                                                <li>CSS Display , Float , Align</li>
+                                                <li>CSS Psedo classes & Elements</li>
+                                                <li>CSS Transition & Transform</li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    JavaScript Syllabus in Back-end Website Development
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+
+                                            <ul>
+                                                <li>Introduction Of Javascript</li>
+                                                <li>Javascript Syntax & Statements</li>
+                                                <li>Javascript Variables </li>
+                                                <li>Javascript Datatypes, Operators</li>
+                                                <li>Javascript Functions</li>
+
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <ul>
+
+                                                <li>Javascript Array & Objects</li>
+                                                <li>Javascript Conditional Statements</li>
+                                                <li>Javascript Looping</li>
+                                                <li>Javascript DOM (Document Object Model)</li>
+                                                <li>Javascript BOM (Browser Object Model)</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFive">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    Jquery Syllabus in Back-end Website Development
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+
+                                            <ul>
+                                                <li>Introduction Of Jquery</li>
+                                                <li>Jquery Hide & Show</li>
+                                                <li>Jquery Animate </li>
+                                                <li>Jquery AJAX</li>
+
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <ul>
+                                                <li>Jquery Callback</li>
+                                                <li>Jquery Get, Add, Remove</li>
+                                                <li>Jquery Get/Post</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Node js Syllabus in Back-end Website Development
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+
+                                            <ul>
+                                                <li>
+                                                    Asynchronous, event-driven JavaScript runtime environment
+                                                </li>
+                                                <li> Highly scalable for handling concurrent operations.</li>
+                                                <li> Cross-platform compatibility for versatile deployment. </li>
 
 
-                                </ul>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <ul>
+                                                <li> Extensive package ecosystem with Node Package Manager.</li>
+                                                <li> Simplifies API development with HTTP handling.
+                                                </li>
+                                                <li> Lightweight and efficient for rapid development.
+                                                </li>
+                                                <li> Thriving community fosters continuous improvement.
+                                                </li>
+                                                <li> Utilizes V8 engine for fast performance.
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
                     </div>
 
-
-
                 </div>
-                <a href="http://127.0.0.1:5501/contact.html#myform" class="text-center">
-
+                <a href="http://127.0.0.1:5501/dream/contact.html#myform" class="text-center">
                     <button class="btn orange border border-warning mb-5 button-apply" id="myform"> Apply Now
                     </button></a>
 
             </div>
         </div>
     </div>
-
     <!-- ------------------------------------------------------------------------------------end Syllabus------------------------------------------------  -->
+
     <!-- ------------------------------------------------------------------------------start FAQ------------------------------------------------------------------------------- -->
 
     <div class="container my-5">
@@ -763,16 +975,16 @@
                         <h2 class="accordion-header" id="headingOne">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                1. What is C++ Programming?
+                                1. What is Back-End Website Development?
                             </button>
                         </h2>
                         <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
                             data-bs-parent="#faqAccordionLeft">
                             <div class="accordion-body">
-                                C++ programming is a powerful, general-purpose programming language used for developing
-                                high-performance applications such as system software, game engines, embedded systems,
-                                and more. The language is known for its efficiency and flexibility, particularly in
-                                performance-critical applications.
+                                Back-End Website Development focuses on the server-side of websites and applications. It
+                                involves working with server technologies like PHP, Node.js, Python, and databases to
+                                manage data, user authentication, and server-side logic that power the functionality of
+                                web applications.
                             </div>
                         </div>
                     </div>
@@ -782,20 +994,14 @@
                         <h2 class="accordion-header" id="headingTwo">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                2. What are the key features of C++?
-
+                                2. What programming languages will I learn in Back-End Website Development?
                             </button>
                         </h2>
                         <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                             data-bs-parent="#faqAccordionLeft">
                             <div class="accordion-body">
-                                <ul>
-                                    <li>Object-Oriented Programming (OOP)</li>
-                                    <li> Fast and efficient execution</li>
-                                    <li> Memory management with pointers</li>
-                                    <li> Support for generic programming using Templates</li>
-                                    <li>Rich Standard Template Library (STL)</li>
-                                </ul>
+                                In back-end development, you will learn core languages like PHP, Python, and JavaScript
+                                (Node.js), along with database technologies like SQL and NoSQL databases.
                             </div>
                         </div>
                     </div>
@@ -805,14 +1011,14 @@
                         <h2 class="accordion-header" id="headingThree">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                3. Do I need prior programming experience to join the C++ course?
+                                3. Do I need prior coding experience to join a Back-End Website Development course?
                             </button>
                         </h2>
                         <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                             data-bs-parent="#faqAccordionLeft">
                             <div class="accordion-body">
-                                No! Our C++ programming course is designed for beginners and experienced developers. We
-                                start from the basics and progress to advanced topics.
+                                No, prior coding experience is not necessary! Our courses are designed for beginners,
+                                and we’ll guide you step-by-step from the basics of back-end development.
                             </div>
                         </div>
                     </div>
@@ -822,14 +1028,15 @@
                         <h2 class="accordion-header" id="headingFour">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                4. How long will it take to complete a C++ course?
+                                4. How long will it take to complete a Back-End Website Development course?
                             </button>
                         </h2>
                         <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
                             data-bs-parent="#faqAccordionLeft">
                             <div class="accordion-body">
-                                The C++ programming course typically takes 3 to 6 months, depending on your pace and
-                                whether you choose part-time or full-time learning.
+                                The back-end website development course typically takes 3 to 6 months to complete,
+                                depending on whether you opt for a part-time or full-time course. Flexible options allow
+                                you to learn at your own pace.
                             </div>
                         </div>
                     </div>
@@ -839,19 +1046,15 @@
                         <h2 class="accordion-header" id="headingFive">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                5. What projects will I work on?
+                                5. What kind of projects will I work on during the course?
                             </button>
                         </h2>
                         <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
                             data-bs-parent="#faqAccordionLeft">
                             <div class="accordion-body">
-                                You’ll build real-world projects like:
-                                <ul>
-                                    <li>Console-based applications</li>
-                                    <li> Mini-games using C++</li>
-                                    <li> Data structures and algorithms implementation</li>
-                                    <li> Memory management and optimization projects</li>
-                                </ul>
+                                You will work on real-world projects like building server-side applications, APIs, and
+                                database-driven websites. These projects will help you develop the practical skills
+                                needed to succeed in back-end website development.
                             </div>
                         </div>
                     </div>
@@ -861,20 +1064,15 @@
                         <h2 class="accordion-header" id="headingSix">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                                6. What job roles can I apply for after learning C++?
+                                6. What tools and technologies will I use in Back-End Website Development?
                             </button>
                         </h2>
                         <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
                             data-bs-parent="#faqAccordionLeft">
                             <div class="accordion-body">
-                                <ul>
-                                    <li>Software Developer</li>
-                                    <li> Game Developer (Unreal Engine)</li>
-                                    <li> Embedded Systems Engineer</li>
-                                    <li> Backend Developer</li>
-                                    <li> High-Performance Computing Engineer</li>
-                                </ul>
-
+                                You’ll work with tools like VS Code, Git, databases such as MySQL and MongoDB, and
+                                server-side frameworks like Express (for Node.js) and Flask (for Python), ensuring you
+                                are well-prepared to work in the industry.
                             </div>
                         </div>
                     </div>
@@ -889,14 +1087,15 @@
                         <h2 class="accordion-header" id="headingSeven">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                                7. Does the course include interview preparation?
+                                7. Will I be ready for a job after completing the course?
                             </button>
                         </h2>
                         <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
                             data-bs-parent="#faqAccordionRight">
                             <div class="accordion-body">
-                                Yes! We offer weekly interview preparation, covering technical coding challenges,
-                                problem-solving skills, and resume building.
+                                Yes! After completing the back-end website development course, you will be ready for
+                                roles like back-end developer or database administrator. We provide job placement
+                                assistance to help you land your first job.
                             </div>
                         </div>
                     </div>
@@ -906,16 +1105,14 @@
                         <h2 class="accordion-header" id="headingEight">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-                                8. Can I work remotely as a C++ Developer?
+                                8. Does the course include interview preparation?
                             </button>
                         </h2>
                         <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight"
                             data-bs-parent="#faqAccordionRight">
                             <div class="accordion-body">
-                                Yes! Many companies hire remote C++ developers, and with the skills you gain in our
-                                course, you’ll be prepared for global job opportunities.
-
-
+                                Yes, we offer interview preparation sessions to help you confidently face technical and
+                                behavioral interviews in the back-end development job market.
                             </div>
                         </div>
                     </div>
@@ -925,14 +1122,14 @@
                         <h2 class="accordion-header" id="headingNine">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
-                                9. Is C++ still relevant today?
+                                9. Are there flexible learning options for working professionals?
                             </button>
                         </h2>
                         <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine"
                             data-bs-parent="#faqAccordionRight">
                             <div class="accordion-body">
-                                Absolutely! C++ remains a core programming language in software development, game
-                                development, and embedded systems.
+                                Yes! We offer part-time and full-time courses, with special evening batches (6 PM to 9
+                                PM) to accommodate working professionals.
                             </div>
                         </div>
                     </div>
@@ -942,14 +1139,15 @@
                         <h2 class="accordion-header" id="headingTen">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
-                                10. What salary can I expect as a C++ Developer?
+                                10. Can I work remotely as a Back-End Developer?
                             </button>
                         </h2>
                         <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen"
                             data-bs-parent="#faqAccordionRight">
                             <div class="accordion-body">
-                                Salaries vary, but entry-level C++ developers can earn $50,000 to $80,000 per year, with
-                                potential for much higher salaries as you gain experience.
+                                Absolutely! Back-end developers can work remotely. Many companies offer remote roles for
+                                back-end developers, and with the skills gained in this course, you’ll be prepared for
+                                opportunities globally.
                             </div>
                         </div>
                     </div>
@@ -959,14 +1157,15 @@
                         <h2 class="accordion-header" id="headingEleven">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
-                                11. What industries use C++ the most?
+                                11. Is Back-End Website Development a good career choice?
                             </button>
                         </h2>
                         <div id="collapseEleven" class="accordion-collapse collapse" aria-labelledby="headingEleven"
                             data-bs-parent="#faqAccordionRight">
                             <div class="accordion-body">
-                                C++ is widely used in industries such as finance, gaming, telecommunications,
-                                automotive, cybersecurity, and high-performance computing.
+                                Yes, back-end development is a highly sought-after skill with many job opportunities. It
+                                offers competitive salaries, growth potential, and the chance to work in diverse
+                                industries.
                             </div>
                         </div>
                     </div>
@@ -976,18 +1175,16 @@
                         <h2 class="accordion-header" id="headingTwelve">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve">
-                                12. What tools and IDEs are best for C++ development?
+                                12. How much can I expect to earn as a Back-End Developer?
                             </button>
                         </h2>
                         <div id="collapseTwelve" class="accordion-collapse collapse" aria-labelledby="headingTwelve"
                             data-bs-parent="#faqAccordionRight">
                             <div class="accordion-body">
-                                Some of the best tools and IDEs for C++ development include:
-                                <li>Visual Studio</li>
-                                <li> CLion</li>
-                                <li> Code::Blocks</li>
-                                <li> Eclipse CDT</li>
-                                <li> Dev-C++</li>
+                                Salaries for back-end developers vary based on experience and location. On average,
+                                entry-level back-end developers can earn $60,000 to $90,000 annually, with potential for
+                                higher earnings as you gain experience. In Mohali and Chandigarh, salaries are
+                                competitive and can increase as your skillset advances.
                             </div>
                         </div>
                     </div>
@@ -1276,22 +1473,22 @@
             <h1 class="text-center   ">Related Courses</h1>
             <ul type="none" id="course-list">
                 <div class="d-flex justify-content-center">
-                    <li><a href="http://127.0.0.1:5500/dream/Courses/webdesign.html">Web Designing Course in
+                    <li><a href="web-design-chandigarh.html">Web Designing Course in
                         Chandigarh </a></li>
-                    <li><a href="http://127.0.0.1:5500/dream/Courses/Fullstack.html">Web Development Course in
+                    <li><a href="Fullstack-Web-Development-Chandigarh.html">Web Development Course in
                             Chandigarh </a></li>
                     <li><a href="http://127.0.0.1:5500/dream/Courses/mernstack.html"> Mern-Stack Development Course in
                             Chandigarh</a></li>
-                   
 
                 </div>
                 <div class="d-flex justify-content-center">
-                   
+                 
                     <li><a href="">Mean-Stack Development Course in Chandigarh</a></li>
 
-                    <li><a href="http://127.0.0.1:5500/dream/Courses/Fullstack.html">Full-Stack Development Course in
+
+                    <li><a href="Fullstack-Web-Development-Chandigarh.html">Full-Stack Development Course in
                             Chandigarh</a></li>
-                    <li><a href="http://127.0.0.1:5500/dream/Courses/digitalmarketing.html">Digital Marketing Course in
+                    <li><a href="digital-marketing-course-chandigarh.html">Digital Marketing Course in
                             Chandigarh</a></li>
 
                 </div>
@@ -1302,18 +1499,18 @@
             <ul type="none" id="course-list">
                 <div class="d-flex justify-content-center">
 
-                    <li><a href="http://127.0.0.1:5500/dream/Courses/clang.html">C Language in Chandigarh</a></li>
-                    <li><a href="http://127.0.0.1:5500/dream/Courses/c++.html">C++ Language in Chandigarh</a></li>
-                    <li><a href="http://127.0.0.1:5500/dream/Courses/java.html"> Java Language in Chandigarh</a></li>
-                    <li><a href="http://127.0.0.1:5500/dream/Courses/javascript.html">Javascript Language in
+                    <li><a href="c-programming-course-chandigarh.html">C Language in Chandigarh</a></li>
+                    <li><a href="c-plus-plus-programming-chandigarh.html">C++ Language in Chandigarh</a></li>
+                    <li><a href="java-course-chandigarh.html"> Java Language in Chandigarh</a></li>
+                    <li><a href="javascript-course-chandigarh.html">Javascript Language in
                             Chandigarh</a></li>
                 </div>
                 <div class="d-flex justify-content-center">
 
-                    <li><a href="http://127.0.0.1:5500/dream/Courses/python.html">Python Language in Chandigarh</a></li>
-                    <li><a href="http://127.0.0.1:5500/dream/Courses/htmlcss.html">HTML/CSS Language in Chandigarh</a>
+                    <li><a href="python-course-chandigarh.html">Python Language in Chandigarh</a></li>
+                    <li><a href="html-css-course-chandigarh.html">HTML/CSS Language in Chandigarh</a>
                     </li>
-                    <li><a href="http://127.0.0.1:5500/dream/Courses/php.html">PHP Language in Chandigarh</a> </li>
+                    <li><a href="php-course-chandigarh.html">PHP Language in Chandigarh</a> </li>
                 </div>
             </ul>
         </div>
@@ -1338,14 +1535,13 @@
 
     <!-- ----------------------------------------------------------end video reviews-----------------------------  -->
 
-
     <div class="container-fluid bg-black text-light">
         <div class="container pb-5">
             <footer>
                 <div class="row">
                     <div class="col-md-3 p-md-0  pt-3">
                         <div class="d-flex align-items-center imgggg pt-3">
-                            <img src="../images/pnglogo.png" class="d-inline " alt="" width="50px" height="50px">
+                            <img src="../images/pnglogo.png" class="d-inline " alt="The Skill Boost" width="50px" height="50px">
                             <div style="font-size: 20px; color: orange;"> <b class="ps-2"> The Skill Boost</b></div>
                         </div>
                         <h5 style="font-size: 13px; padding-left: 60px;" class="text-secondary"><b></b> EDUCATION &

@@ -242,7 +242,7 @@
                         document.getElementById("blog-title").innerText = blog.Title;
                         document.getElementById("slugg").innerText = blog.Title;
 
-                        document.getElementById("blog-description").innerText = blog.Description1;
+                        document.getElementById("blog-description").innerHTML = blog.Description1;
                     } else {
                         console.error("Blog not found: ", blog.message);
                         document.getElementById("blog-detail-container").innerText = "Blog not found!";

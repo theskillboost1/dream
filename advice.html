@@ -6,16 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/">
+
+
+
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/bootstrap.css">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="icon" type="image/x-icon" href="./images/fav.png">
+    <link rel="icon" type="image/x-icon" href="/images/fav.png">
+
 
     <style>
         body {
             font-family: Arial, sans-serif;
             background-color: #111;
+            /* dark background for the whole page */
             color: white;
             margin: 0;
             padding: 0;
@@ -27,6 +32,7 @@
             border-collapse: collapse;
             margin: 20px 0;
             background-color: rgba(0, 0, 0, 0.875);
+            /* dark background */
             color: white;
         }
 
@@ -46,10 +52,12 @@
 
         tr:nth-child(even) {
             background-color: rgba(0, 0, 0, 0.6);
+            /* darker rows for contrast */
         }
 
         tr:nth-child(odd) {
             background-color: rgba(0, 0, 0, 0.75);
+            /* slightly lighter rows */
         }
 
         button {
@@ -66,12 +74,14 @@
 
         button:hover {
             background-color: #e67e22;
+            /* lighter orange on hover */
         }
 
         button:focus {
             outline: none;
         }
 
+        /* Optional: Add a little bit of animation to the hover effect */
         button:hover {
             transform: scale(1.05);
             transition: 0.3s;
@@ -79,55 +89,8 @@
 
         .odd {
             overflow-x: auto;
-            /* max-width: 1200px; */
             margin: 0 auto;
             padding: 20px;
-        }
-
-        #from .for {
-            background-color: white;
-            height: 450px;
-            width: 400px;
-            border: 3px solid black;
-            text-align: center;
-            margin: 50px auto;
-            padding: 20px;
-            border-radius: 10px;
-        }
-
-        #from h1 {
-            color: black;
-            font-size: 24px;
-            margin-bottom: 20px;
-        }
-
-        #from label {
-            color: black;
-            font-size: 15px;
-            margin-bottom: 8px;
-            display: block;
-            margin-right: 200px;
-        }
-
-        #from input[type="text"],
-        #from input[type="password"] {
-            width: 80%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 2px solid black;
-            border-radius: 5px;
-            font-size: 16px;
-            color: black;
-            background-color: rgb(250, 255, 189);
-        }
-
-        #from {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background-color: #e67e22;
-            height: 100vh;
-            z-index: 100;
         }
     </style>
 </head>
@@ -137,20 +100,22 @@
     <nav class="navbar navbar-expand-md navbar-dark bg-black position-sticky"
         style="top:10px; border-bottom: 1px solid gray;">
         <div class="container">
-            <a class=" " title="The Skill Boost" style="color:orange;" href="./index.html"><img
-                    src="./images/pnglogo.png" width="80px" alt="The Skill Boost"></a>
+            <a class=" " title="The Skill Boost" style="color:orange;" href="index.html"><img src="./images/pnglogo.png"
+                    width="80px" alt="The Skill Boost"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="fa fa-bars" style="color:orange"></span>
             </button>
             <div class="collapse navbar-collapse" id="nav">
-                <ul class="navbar-nav ms-auto">
+                <ul class=" navbar-nav ms-auto ">
                     <li class="nav-item pt-md-3" style="height: 80px;">
-                        <a class="nav-link text-white" aria-current="page" href="./admin.html">Contact Details</a>
+                        <a class="nav-link text-white " aria-current="page" href="./admin.html">Contact Details</a>
                     </li>
+
                     <li class="nav-item pt-md-3" style="height: 80px;">
                         <a class="nav-link text-white" href="./adminquery.html">Query</a>
                     </li>
+
                     <li class="nav-item pt-md-3" style="height: 80px;">
                         <a class="nav-link text-white" href="./advice.html">Advice</a>
                     </li>
@@ -158,22 +123,21 @@
                         <a class="nav-link text-white" href="./adminblogs.html">Blogs</a>
                     </li>
                 </ul>
+
+
             </div>
         </div>
     </nav>
 
     <div class="container odd">
-    <h1 class="text-center py-5">All User Data Shown From Home Page</h1>
+        <h1 class="text-center py-5">All User Data Shown From Contact Page</h1>
 
-        <table class="border">
+        <table class="table table-dark table-striped table-hover">
             <thead class="text-warning">
-                <tr>
+                <tr class="text-center">
                     <th>S.No.</th>
-                    <th>Date</th>
                     <th>Name</th>
-                    <th>Email</th>
-                    <th>Contact</th>
-                    <th>Qualification</th>
+                    <th>Mobile Number</th>
                     <th>Course</th>
                     <th>Action</th>
                 </tr>
@@ -187,10 +151,11 @@
         function handleDelete(id) {
             console.log("Attempting to delete user with ID:", id);
 
-            fetch(`https://the-skill-boost-server.onrender.com/delete/${id}`, {
+            fetch(`https://the-skill-boost-server.onrender.com/delete1/${id}`, {
                 method: 'DELETE',
             })
                 .then(response => {
+
                     if (!response.ok) {
                         throw new Error('Failed to delete user');
                     }
@@ -209,77 +174,37 @@
                     alert('An error occurred. Please try again.');
                 });
         }
+        var No = 1
 
-        var No = 1;
-        fetch('https://the-skill-boost-server.onrender.com/dashboard')
+        fetch('https://the-skill-boost-server.onrender.com/advicedata')
             .then(response => response.json())
             .then(json => {
+
                 const outputElement = document.getElementById("output");
                 outputElement.innerHTML = '';
 
                 for (let i = 0; i < json.length; i++) {
-                    const Date = json[i].Date;
-
-                    const name = json[i].Name;
-
-                    const Email = json[i].Email;
-                    const Contact = json[i].Contact;
-                    const Qualification = json[i].Qualification;
+                    const Name = json[i].Name;
+                    const Phone = json[i].Phone
                     const Course = json[i].Course;
                     const id = json[i]._id;
 
                     outputElement.innerHTML += `
-                    <tr>
-                        <td>${No}</td>
-                        <td>${Date}</td>
-
-                        <td>${name}</td>
-                        <td>${Email}</td>
-                        <td>${Contact}</td>
-                        <td>${Qualification}</td>
-                        <td>${Course}</td>
-                        <td><button onclick="handleDelete('${id}')">Delete</button></td>
-                    </tr>
-                    `;
-                    No = No + 1;
+                <tr>
+                    <td>${No}</td>
+                    <td>${Name}</td>
+                    <td>${Phone}</td>
+                    <td>${Course}</td>
+                    <td> <button onclick="handleDelete('${id}')">Delete</button></td>
+                </tr>
+                `;
+                    No = No + 1
                 }
             })
             .catch(error => console.error('Error fetching data:', error));
     </script>
 
-    <div  id="from">
-        <div class="for">
-        <form name="myform" id="myform">
-            <h1>Login Form</h1>
-            <hr>
-            <label for="username">UserName:</label><br>
-            <input type="text" id="username" name="name"><br>
 
-            <label for="password">Password:</label><br>
-            <input type="password" id="password" name="password"><br>
-
-            <input type="submit" value="Log In" class="btn btn-warning">
-        </form>
-    </div>
-    </div>
-
-    <script>
-        var Form = document.getElementById('myform')
-
-        Form.onsubmit = function (e) {
-            e.preventDefault();
-
-            var From = document.getElementById("from");
-            var name = document.myform.name.value;
-            var password = document.myform.password.value;
-
-            if (name == "admin" && password == "mypass") {
-                From.style.display = 'none';
-            } else {
-                alert("Wrong user");
-            }
-        }
-    </script>
 
 </body>
 

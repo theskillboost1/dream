@@ -308,24 +308,25 @@
                 <!-- Form Section -->
                 <div class="col-md-5 col-sm-12" id="Advise-form">
                     <!-- Form Container -->
-                    <form class="advise-form border ms-0 mt-5 bg-white shadow-lg">
+                    <form class="advise-form border ms-0 mt-5 bg-white shadow-lg"
+                    action="https://the-skill-boost-server.onrender.com/advice" method="post">
                         <div class="form-header text-center fs-5">
                             <p><b>Get Advice Now</b></p>
                         </div>
                         <div class="form-main p-3">
                             <!-- Name Input -->
                             <div class="form-group mt-3">
-                                <input type="text" class="form-control" id="name" placeholder="Enter Your Name"
+                                <input type="text" class="form-control" id="name"name="Name" placeholder="Enter Your Name"
                                     required>
                             </div><br>
                             <!-- Phone Number Input -->
                             <div class="form-group">
-                                <input type="tel" id="phone" class="form-control" placeholder="Enter Your Phone Number"
+                                <input type="tel" id="phone" class="form-control" name="Phone" placeholder="Enter Your Phone Number"
                                     pattern="[0-9]{10}" required>
                             </div><br>
                             <!-- Course Selection Dropdown -->
                             <div class="form-group">
-                                <select name="course" id="courses" class="form-control">
+                                <select name="Course" id="courses" class="form-control">
                                     <option value="course">Select Course</option>
                                     <option value="basic-computer">Basic Computer</option>
                                     <option value="tally-accounting">Tally-Accounting</option>

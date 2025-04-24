@@ -6,11 +6,29 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
+    <!-- Homepage -->
 
 <url>
   <loc>https://theskillboost.com/</loc>
   <lastmod>2024-04-10T06:14:06+00:00</lastmod>
 </url>
 
+<!-- Corrected Java Course Page -->
+    <url>
+        <loc>https://theskillboost.com/courses/java-course-chandigarh.html</loc>
+        <lastmod>2025-04-23T06:00:00+00:00</lastmod>
+    </url>
+
+    <!-- DCA Course Page -->
+    <url>
+        <loc>https://theskillboost.com/courses/dca-course-chandigarh.html</loc>
+        <lastmod>2025-04-23T06:00:00+00:00</lastmod>
+    </url>
+
+    <!-- Contact Us Page -->
+    <url>
+        <loc>https://theskillboost.com/contact-us.html</loc>
+        <lastmod>2025-04-23T06:00:00+00:00</lastmod>
+    </url>
 
 </urlset>

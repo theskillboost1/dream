@@ -865,8 +865,17 @@ body{background-color: black;}
   display: block;
 }
 
+/* best-computer-diploma */
+#b-courses a{
+  font-size: 17px;
 
-
+text-decoration: none;
+color: black;
+}
+#b-courses a:hover{
+  color: orange;
+  font-weight: bold;
+}
 
 
 

@@ -26,12 +26,12 @@
     }
 
     #homepage {
-      width: 90%;
-      max-width: 800px;
+      width: 100%;
+      max-width: 1000px;
       height: auto;
       margin: auto;
       position: relative;
-      z-index: 10;
+      z-index: 0;
       text-align: center;
       color: white;
       top: 50%;
@@ -41,13 +41,13 @@
     }
 
     #homepage h1 {
-      font-size: 2.5rem;
+      /* font-size: 2.5rem; */
       color: orange;
       margin-bottom: 20px;
     }
 
     #homepage p {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       color: white;
       margin-bottom: 30px;
     }
@@ -62,6 +62,8 @@
       border: none;
       cursor: pointer;
       transition: all 0.3s ease;
+      border: 1px solid orange;
+
     }
 
     #homepage button:hover {
@@ -98,25 +100,6 @@
     /* //////////////////////////////////////////end////////////////////////////////// */
  /* ///////////////////////////////////////////////////////////////what we offer/////////////////////////// */
 
-/* Section title and subtitle */
-.section-title {
-  text-align: center;
-  color: orange;
-  /* font-size: 2.5rem; */
-  margin-top: 60px;
-  margin-bottom: 20px;
-}
-
-.section-subtitle {
-  text-align: center;
-  font-size: 1.2rem;
-  color: #ddd;
-  margin-bottom: 60px;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 
 
 /* ///////////////////////////////////end////////////////////////////// */
@@ -132,6 +115,7 @@
   padding-top: 20px;
   color: orange;
 }
+
 
 .highlight-title {
   font-size: 1.1rem;
@@ -271,6 +255,9 @@
         margin-top: 0px;
         background-color: red;
     } */
+      /* .technology-card i{
+        color: white;
+      } */
 #tech h1{
   margin-top: 100px;
 }
@@ -283,51 +270,105 @@
 
  }
 
- .technology-card:hover i {
+ .technology-card:hover p {
    color: black;
  }
 
  .technology-card:hover h5 {
    color: white;
  }
+ .technology-card:hover i {
+   color: white;
+ }
  /* ////////////////////////////////////////////end/////////////////////////  */
  /* ///////////////////////////////grow////////////////////////////// */
- #grow-row{
+/* Container styling */
+#grow-row {
   background-color: #181717;
   border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 165, 0, 0.1);
+  transition: box-shadow 0.4s ease;
 }
-#grow h1{
+#grow-row:hover {
+  box-shadow: 0 0 30px rgb(255, 166, 0);
+
+}
+
+/* Text hover animation */
+.hover-toggle {
+  display: inline-block;
+  transition: color 0.4s ease, transform 0.3s ease, text-shadow 0.4s ease;
+  cursor: pointer;
+}
+.hover-toggle.text-white:hover {
+  color: orange !important;
+  transform: scale(1.05);
+  text-shadow: 0 0 8px rgba(255, 165, 0, 0.6);
+}
+.hover-toggle.text-orange:hover {
+  color: white !important;
+  transform: scale(1.05);
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+.text-orange {
   color: orange;
 }
-#grow-btn{
+
+/* Button styling */
+#grow-btn {
   background-color: orange;
   color: black;
+  font-weight: 600;
+  border: 2px solid orange;
+  transition: all 0.4s ease;
 }
-#grow-btn:hover{
-  border: 1px solid orange;
+#grow-btn:hover {
   background-color: transparent;
   color: white;
+  border: 2px solid orange;
+  transform: scale(1.05);
 }
 
-
-
-
+/* Circular image with hover effect */
 .grow-img {
   width: 100%;
   max-width: 350px;
   height: auto;
-  aspect-ratio: 1 / 1; /* Keeps it a perfect circle */
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   border: 5px solid orange;
-  transition: transform 0.3s ease;
   border-radius: 50%;
+  box-shadow: 0 0 20px rgba(255, 165, 0, 0.1);
+  transition: box-shadow 0.4s ease;
+  transition: transform 0.4s ease, border-color 0.4s ease;
+}
+.grow-img:hover {
+  transform: scale(1.05);
+  border: 5px solid white;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.273);
+
 }
 
+/* Responsive image */
 @media (max-width: 576px) {
   .grow-img {
-    max-width: 200px; /* Smaller size for mobile */
+    max-width: 200px;
   }
 }
+
+/* Fade-in animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards;
+}
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
  /* ////////////////////////////////////end grow///////////////////////// */
 /* ////////////////////////////////////////////////////////////work with  */
 /* Main container */
@@ -337,6 +378,7 @@
   text-align: center;
   overflow: hidden;
   margin-top: 100px;
+  border-radius: 10px;
 }
 
 
@@ -481,33 +523,76 @@
 
 /* ////////////////////////end///////////////////////////// */
 /* ////////////////////what we offer/////////////// */
-/* Responsive utility */
+.section-title {
+  text-align: center;
+  color: orange;
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #ddd;
+  margin-bottom: 60px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#weoffer {
+  background-color: #202020;
+  transition: background-color 0.3s ease;
+}
+#weoffer:hover {
+  background-color: white;
+}
+#weoffer h3 {
+  color: orange;
+}
+#weoffer:hover h3 {
+  color: orange;
+}
+#weoffer:hover p {
+  color: black;
+}
+
+.read-more-toggle {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.full-text.d-none {
+  display: none;
+}
+
+.offer-img {
+  max-width: 300px;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
   .d-flex.flex-column.flex-md-row {
     flex-direction: column !important;
     text-align: center;
   }
-
   .me-md-3 {
     margin-right: 0 !important;
     margin-bottom: 15px !important;
   }
-
   .img-fluid {
     max-width: 100% !important;
     height: auto !important;
     margin: 0 auto;
   }
-
   .btn {
     display: inline-block;
     margin-top: 10px;
   }
-
   .text-orange {
     font-size: 1.3rem;
   }
-
   p {
     font-size: 0.95rem;
   }
@@ -517,11 +602,11 @@
   .section-title {
     font-size: 2rem;
   }
-
   .section-subtitle {
     font-size: 1rem;
   }
 }
+
 /* ////////////////////end what we offer/////////////// */
 
 /* //////////////////////////////////////hero///////////////////// */
@@ -591,9 +676,14 @@
       color: #000;
       border-radius: 12px;
       padding: 30px;
-      box-shadow: 0 0 10px rgba(255, 165, 0, 0.1);
+            box-shadow: 0 0 20px rgba(255, 165, 0, 0.1);
+  transition: box-shadow 0.4s ease;
     }
+     
 
+.faq-container:hover {
+  box-shadow: 0 0 30px rgb(255, 166, 0);
+}
     .faq-heading {
       color: orange;
       font-size: 2rem;
@@ -711,13 +801,25 @@
 
 
 /* //////////////////////////////////end faq's/////////////////////////////// */
+/* ///////////////////////////////////MORE SERVICE//////////////////////////// */
+
+
+
+/*///////////////////////////// END MORE SERVICES////////////////////////////////////////// */
 /* /////////////////////////////////contact form////////////////////////// */
  .contact-container {
       background-color: #fff;
       border-radius: 12px;
       padding: 60px 30px;
-      box-shadow: 0 0 20px rgba(255, 165, 0, 0.1);
+      /* box-shadow: 0 0 20px rgba(255, 165, 0, 0.1); */
+       box-shadow: 0 0 20px rgba(255, 165, 0, 0.1);
+  transition: box-shadow 0.4s ease;
     }
+     
+
+.contact-container:hover {
+  box-shadow: 0 0 30px rgb(255, 166, 0);
+}
 
     .contact-left {
       background: linear-gradient(135deg, orange 0%, #ff6600 100%);
@@ -860,3 +962,86 @@
 
 
 /* ///////////////////////////////////end contact form///////////////////////// */
+/* /////////////////////////////////////////about page/////////////////////////// */
+ .about-highlight {
+      color: orange;
+    }
+
+    .about-btn-orange {
+      background-color: orange;
+      color: #fff;
+      border: 1px solid orange;
+    }
+
+    .about-btn-orange:hover {
+      background-color: transparent;
+      border: 1px solid orange;
+
+    }
+
+    .about-container {
+      background-color: #fff;
+      color: #222;
+      border-radius: 15px;
+      padding: 40px 30px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      animation: about-fade-in 1s ease forwards;
+    }
+
+    .about-list li {
+      list-style: none;
+      padding-left: 1.2rem;
+      position: relative;
+      margin-bottom: 10px;
+    }
+
+    .about-list li::before {
+      content: "✔";
+      color: orange;
+      position: absolute;
+      left: 0;
+    }
+
+    .about-img {
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      max-width: 100%;
+      opacity: 0;
+      animation: about-slide-left 1s ease forwards;
+      animation-delay: 0.5s;
+    }
+
+    .about-text-content {
+      opacity: 0;
+      animation: about-slide-right 1s ease forwards;
+    }
+
+    @keyframes about-fade-in {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes about-slide-left {
+      from { opacity: 0; transform: translateX(50px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes about-slide-right {
+      from { opacity: 0; transform: translateX(-50px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    @media (max-width: 768px) {
+      .about-section-title {
+        font-size: 28px;
+      }
+
+      .about-img {
+        animation: about-fade-in 1s ease forwards;
+      }
+
+      .about-text-content {
+        animation: about-fade-in 1s ease forwards;
+      }
+    }
+/* ///////////////////////////////////////////end about page/////////////////////// */

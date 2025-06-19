@@ -1,0 +1,71 @@
+/* Skill Development Course Custom Styles */
+.hero-skill {
+    background: linear-gradient(120deg, #ff9800 0%, #ffc107 100%);
+    color: #fff;
+    padding: 60px 0 40px 0;
+    border-radius: 0 0 40px 40px;
+    box-shadow: 0 8px 32px rgba(255, 152, 0, 0.18);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+.hero-skill h1 {
+    font-weight: 700;
+    font-size: 2.8rem;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+.hero-skill p {
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+.skill-section {
+    background: #fff8e1;
+    border-radius: 18px;
+    box-shadow: 0 2px 16px rgba(255, 193, 7, 0.08);
+    padding: 32px 24px;
+    margin-bottom: 32px;
+    transition: box-shadow 0.3s;
+}
+.skill-section:hover {
+    box-shadow: 0 8px 32px rgba(255, 193, 7, 0.18);
+}
+.skill-section h2 {
+    color: #ff9800;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+.skill-section ul {
+    padding-left: 20px;
+}
+.cta-enroll {
+    background: linear-gradient(90deg, #ff9800 60%, #ffc107 100%);
+    color: #fff !important;
+    font-size: 1.3rem;
+    font-weight: 600;
+    border-radius: 30px;
+    padding: 16px 48px;
+    box-shadow: 0 4px 24px rgba(255, 152, 0, 0.18);
+    transition: background 0.2s, transform 0.2s;
+    margin-top: 16px;
+    display: inline-block;
+}
+.cta-enroll:hover {
+    background: linear-gradient(90deg, #ffc107 60%, #ff9800 100%);
+    color: #fff;
+    transform: scale(1.05);
+    text-decoration: none;
+}
+@media (max-width: 600px) {
+    .hero-skill h1 {
+        font-size: 2rem;
+    }
+    .skill-section {
+        padding: 16px 6px;
+    }
+    .cta-enroll {
+        font-size: 1rem;
+        padding: 12px 18px;
+    }
+}

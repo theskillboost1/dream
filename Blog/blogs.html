@@ -19,6 +19,17 @@
         /* body{
             height: 2000px;
         } */
+        .blogcard {
+            background-color: white;
+            margin: 5px;
+            border-radius: 5px;
+            transition: .5s;
+            
+        }
+        .blogcard p{color:black}
+        .blogcard:hover{background-color: black}
+        .blogcard:hover p{color: white;}
+
     </style>
 </head>
 
@@ -76,55 +87,64 @@
                         </li>
                         <div class="dropdown-content" style="min-width: 200px; overflow: hidden;">
                             <li class="limain">
-                                <a href="../Courses/basic-computer-course-chandigarh.html">Basic Computer  </a>
+                                <a href="../Courses/basic-computer-course-chandigarh.html">Basic Computer </a>
                                 <div class="divv">
-                                    <a href="../Courses/basic-computer-course-chandigarh.html" class="text-dark">Basic Computer </a>
+                                    <a href="../Courses/basic-computer-course-chandigarh.html" class="text-dark">Basic
+                                        Computer </a>
                                 </div>
                             </li>
                             <li class="limain">
                                 <a href="../Courses/tally-course-chandigarh.html">Tally Accounting </a>
                                 <div class="divv">
-                                    <a href="../Courses/tally-course-chandigarh.html" class="text-dark">Tally Accounting </a>
+                                    <a href="../Courses/tally-course-chandigarh.html" class="text-dark">Tally Accounting
+                                    </a>
                                 </div>
                             </li>
                             <li class="limain">
                                 <a href="../Courses/web-development-course-in-chandigarh.html">Web Development </a>
                                 <div class="divv">
-                                    <a href="../Courses/web-development-course-in-chandigarh.html" class="text-dark">Web Development </a>
+                                    <a href="../Courses/web-development-course-in-chandigarh.html" class="text-dark">Web
+                                        Development </a>
                                 </div>
                             </li>
 
                             <li class="limain">
                                 <a href="../Courses/web-design-chandigarh.html"> Web Designing </a>
                                 <div class="divv">
-                                    <a href="../Courses/web-design-chandigarh.html" class="text-dark"> Web Designing </a>
+                                    <a href="../Courses/web-design-chandigarh.html" class="text-dark"> Web Designing
+                                    </a>
                                 </div>
                             </li>
 
                             <li class="limain">
-                                <a href="../Courses/Fullstack-Web-Development-Chandigarh.html"> Full Stack Development </a>
+                                <a href="../Courses/Fullstack-Web-Development-Chandigarh.html"> Full Stack Development
+                                </a>
                                 <div class="divv">
-                                    <a href="../Courses/Fullstack-Web-Development-Chandigarh.html" class="text-dark"> Full Stack Development </a>
+                                    <a href="../Courses/Fullstack-Web-Development-Chandigarh.html" class="text-dark">
+                                        Full Stack Development </a>
                                 </div>
                             </li>
 
                             <li class="limain">
                                 <a href="../Courses/mern-stack-course-chandigarh.html"> MERN Stack </a>
                                 <div class="divv">
-                                    <a href="../Courses/mern-stack-course-chandigarh.html" class="text-dark">MERN Stack</a>
+                                    <a href="../Courses/mern-stack-course-chandigarh.html" class="text-dark">MERN
+                                        Stack</a>
                                 </div>
                             </li>
 
                             <li class="limain">
                                 <a href="../Courses/mean-stack-development-course-chandigarh.html"> MEAN Stack </a>
                                 <div class="divv">
-                                    <a href="../Courses/mean-stack-development-course-chandigarh.html" class="text-dark">MEAN Stack</a>
+                                    <a href="../Courses/mean-stack-development-course-chandigarh.html"
+                                        class="text-dark">MEAN Stack</a>
                                 </div>
                             </li>
                             <li class="limain">
                                 <a href="../Courses/digital-marketing-course-chandigarh.html"> Digital Marketing </a>
                                 <div class="divv">
-                                    <a href="../Courses/digital-marketing-course-chandigarh.html" class="text-dark">Digital Marketing</a>
+                                    <a href="../Courses/digital-marketing-course-chandigarh.html"
+                                        class="text-dark">Digital Marketing</a>
                                 </div>
                             </li>
 
@@ -148,13 +168,15 @@
                             <li class="limain">
                                 <a href="../Courses/c-programming-course-chandigarh.html"> C Language</a>
                                 <div class="divv">
-                                    <a href="../Courses/c-programming-course-chandigarh.html" class="text-dark">C Language </a>
+                                    <a href="../Courses/c-programming-course-chandigarh.html" class="text-dark">C
+                                        Language </a>
                                 </div>
                             </li>
                             <li class="limain">
                                 <a href="../Courses/c-plus-plus-programming-chandigarh.html"> C++ Language </a>
                                 <div class="divv">
-                                    <a href="../Courses/c-plus-plus-programming-chandigarh.html" class="text-dark"> C++ Language</a>
+                                    <a href="../Courses/c-plus-plus-programming-chandigarh.html" class="text-dark"> C++
+                                        Language</a>
                                 </div>
                             </li>
 
@@ -168,7 +190,8 @@
                             <li class="limain">
                                 <a href="../Courses/javascript-course-chandigarh.html"> JavaScript</a>
                                 <div class="divv">
-                                    <a href="../Courses/javascript-course-chandigarh.html" class="text-dark"> JavaScript </a>
+                                    <a href="../Courses/javascript-course-chandigarh.html" class="text-dark"> JavaScript
+                                    </a>
                                 </div>
                             </li>
 
@@ -257,27 +280,14 @@
                     json.forEach((item) => {
                         const Card = document.getElementById('Blogss');
                         Card.innerHTML += `
-                        <div class="col-12 p-2">
-                            <div class="blogcard">
-                                <h2 class="py-2 text-warning">${item.Title}</h2>
-                                <div class="col-md-4">
-                                    <div class="row text-secondary">
-                                        <div class="col-1">
-                                            <img src="../images/pnglogo.png" alt="The Skill Boost" height="50px" width="50px" style="border-radius: 50%;">
-                                        </div>
-                                        <div class="ps-4 col-4 text-center">
-                                            <p class="pt-3">The Skill Boost</p>
-                                        </div>
-                                        <div class="col pt-3">
-                                            <p>${item.Date}</p>
-                                        </div>
-                                    </div>
+                        
+                            <div class="blogcard p-3 shadow-lg">
+                                <h2 class="pb-2 text-warning">${item.Title}</h2>
+                                <p >${item.Description}</p>
+                                <a href="blog-detail.html?slug=${item.Slug}" class="btn btn-outline-warning border-2">Learn More</a>
+                        
                                 </div>
-                                <p class="text-light">${item.Description}</p>
-                                <a href="blog-detail.html?slug=${item.Slug}" class="btn btn-outline-warning">Learn More</a>
-                            </div>
-                            <hr style="color: white;">
-                        </div>
+                         
                     `;
                     });
                 } catch (error) {
@@ -332,7 +342,8 @@
                     <div class="row">
                         <div class="col-md-3 p-md-0  pt-3">
                             <div class="d-flex align-items-center imgggg pt-3">
-                                <img src="../images/pnglogo.png" class="d-inline " alt="The Skill Boost" width="50px" height="50px">
+                                <img src="../images/pnglogo.png" class="d-inline " alt="The Skill Boost" width="50px"
+                                    height="50px">
                                 <div style="font-size: 20px; color: orange;"> <b class="ps-2"> The Skill Boost</b></div>
                             </div>
                             <h5 style="font-size: 13px; padding-left: 60px;" class="text-secondary"><b></b> EDUCATION &
